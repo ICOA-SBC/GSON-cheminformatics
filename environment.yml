@@ -19,3 +19,4 @@ dependencies:
     - chembl_webresource_client==0.10.0
     - biopandas==0.2.5
     - pypdb==1.300
+    - prince==0.2.6
