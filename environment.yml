@@ -1,0 +1,21 @@
+name: teachopencadd
+channels:
+  - rdkit
+  - samoturk
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6.7
+  - pip
+  - jupyter=1.0.0
+  - rdkit=2019.03.1
+  - pandas=0.24.2
+  - pymol
+  - pmw=2.0.1
+  - scikit-learn=0.21.3
+  - seaborn
+  - wand=0.5.6
+  - pip:
+    - chembl_webresource_client==0.10.0
+    - biopandas==0.2.5
+    - pypdb==1.300
