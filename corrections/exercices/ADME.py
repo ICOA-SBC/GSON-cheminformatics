@@ -95,7 +95,8 @@ def df_rule_of_five(df):
 ChEMBL_df = pd.read_csv('../data/T1/EGFR_compounds.csv', index_col=0)
 
 inputs_df_rule_of_five = [
-    Args(ChEMBL_df.head())
+    Args(ChEMBL_df.head()),
+    Args(ChEMBL_df)
 ]
 
 exo_df_rule_of_five = ExerciseFunction(
@@ -135,7 +136,8 @@ def get_properties_stats(data_df):
 filtered_df = pd.read_csv('../data/T2/EGFR_compounds_lipinski.csv', index_col=0, sep=';')
 
 inputs_get_properties_stats = [
-    Args(filtered_df.head())
+    Args(filtered_df.head()),
+    Args(filtered_df)
 ]
 
 exo_get_properties_stats = ExerciseFunction(
