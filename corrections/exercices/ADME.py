@@ -2,13 +2,14 @@ from rdkit import Chem
 from rdkit.Chem import Descriptors
 import pandas as pd
 from nbautoeval import ExerciseFunction, Args, CallRenderer, PPrintRenderer, PPrintCallRenderer
-    
-def rule_of_five(smi):
-#     Lcondition = [(name, True) if [Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule)) <= 500, Descriptors.NumHAcceptors(Chem.MolFromSmiles(molecule)) <= 10, Descriptors.NumHDonors(Chem.MolFromSmiles(molecule)) <= 5, Descriptors.MolLogP(Chem.MolFromSmiles(molecule)) <= 5].count(True) >= 3 else (name, False) for name, molecule in smi.items()]
+   
+#def rule_of_five(smiles_dict):
+#     Lcondition = [(name, True) if [Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule)) <= 500, Descriptors.NumHAcceptors(Chem.MolFromSmiles(molecule)) <= 10, Descriptors.NumHDonors(Chem.MolFromSmiles(molecule)) <= 5, Descriptors.MolLogP(Chem.MolFromSmiles(molecule)) <= 5].count(True) >= 3 else (name, False) for name, molecule in smiles_dict.items()]
 #     return Lcondition if len(Lcondition) > 1 else Lcondition[0]
 
+def rule_of_five(smiles_dict):
     Lcondition = []
-    for name, molecule in smi.items():
+    for name, molecule in smiles_dict.items():
     
         # Calculate rule of five chemical properties
         m = Chem.MolFromSmiles(molecule)
@@ -39,7 +40,7 @@ inputs_rule_of_five = [
     Args(D_smiles),
     Args(smiles_2),
     Args(smiles_3),
-
+    Args(smiles_4),
 ]
 
 exo_rule_of_five = ExerciseFunction(
@@ -50,23 +51,6 @@ exo_rule_of_five = ExerciseFunction(
         ))
 
 #________________________________________________________________________________
-
-#def df_rule_of_five(df):
-#    
-#    m = Chem.MolFromSmiles(df['smiles'])
-#    
-#    # Calculate rule of five chemical properties
-#    MW = Descriptors.ExactMolWt(m)
-#    HBA = Descriptors.NumHAcceptors(m)
-#    HBD = Descriptors.NumHDonors(m)
-#    LogP = Descriptors.MolLogP(m)
-#    
-#    # Rule of five conditions
-#    conditions = [MW <= 500, HBA <= 10, HBD <= 5, LogP <= 5]
-#    
-#    # Create pandas row for conditions results with values and information whether rule of five is violated
-#    return pd.Series([MW, HBA, HBD, LogP, 'yes']) if conditions.count(True) >= 3 else pd.Series([MW, HBA, HBD, LogP, 'no'])
-    
 
 def df_rule_of_five(df):
     
@@ -86,6 +70,7 @@ def df_rule_of_five(df):
             Ldescriptors.append(pd.Series([MW, HBA, HBD, LogP, 'yes']))
         else:
             Ldescriptors.append(pd.Series([MW, HBA, HBD, LogP, 'no']))
+            
     # Create pandas row for conditions results with values and information whether rule of five is violated
     rule5_prop_df = pd.DataFrame(Ldescriptors)
     rule5_prop_df.columns = ['MW', 'HBA', 'HBD', 'LogP', 'rule_of_five_conform']
