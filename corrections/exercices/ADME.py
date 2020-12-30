@@ -33,14 +33,14 @@ smiles_4 = {'Beta-carotene' : 'CC1=C(C(CCC1)(C)C)C=CC(=CC=CC(=CC=CC=C(C)C=CC=C(C
 smiles_5 = {'Cannabidiol' : 'CCCCCC1=CC(=C(C(=C1)O)C2C=C(CCC2C(=C)C)C)O'}
 smiles_6 = {'Aspirine' : 'CC(=O)OC1=CC=CC=C1C(=O)O'}
 smiles_7 = {'Morphine' : 'CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O'}
-D_smiles = {**smiles_5, **smiles_6, **smiles_7}
+D_smiles = {**smiles_4, **smiles_5, **smiles_6}
 
 inputs_rule_of_five = [
     Args(smiles_1),
     Args(D_smiles),
     Args(smiles_2),
     Args(smiles_3),
-    Args(smiles_4),
+    Args(smiles_7),
 ]
 
 exo_rule_of_five = ExerciseFunction(
@@ -73,15 +73,16 @@ def df_rule_of_five(df):
             
     # Create pandas row for conditions results with values and information whether rule of five is violated
     rule5_prop_df = pd.DataFrame(Ldescriptors)
-    rule5_prop_df.columns = ['MW', 'HBA', 'HBD', 'LogP', 'rule_of_five_conform']
-    df = df.join(rule5_prop_df)
-    return(df)
+    rule5_prop_df.columns = ['MW', 'HBA', 'HBD', 'LogP', 'rule_of_5']
+    rule5_prop_df = rule5_prop_df.set_index(df.index)
+    
+    return rule5_prop_df
 
 ChEMBL_df = pd.read_csv('../data/T1/EGFR_compounds.csv', index_col=0)
 
 inputs_df_rule_of_five = [
-    Args(ChEMBL_df.head()),
-    Args(ChEMBL_df)
+    Args(ChEMBL_df[['smiles']].head()),
+    Args(ChEMBL_df[['smiles']])
 ]
 
 exo_df_rule_of_five = ExerciseFunction(
@@ -121,8 +122,8 @@ def get_properties_stats(data_df):
 filtered_df = pd.read_csv('../data/T2/EGFR_compounds_lipinski.csv', index_col=0, sep=';')
 
 inputs_get_properties_stats = [
-    Args(filtered_df.head()),
-    Args(filtered_df)
+    Args(filtered_df[["HBD", "HBA", "MW", "LogP"]].head()),
+    Args(filtered_df[["HBD", "HBA", "MW", "LogP"]])
 ]
 
 exo_get_properties_stats = ExerciseFunction(
