@@ -17,8 +17,10 @@ question-01:
   options:
     - text: "PCA is a dimensionality reduction tool"
       correct: true
-    - text: "You don't lose any information by looking only at the main 2 principals components"
+    - text: "You don't lose any information by looking only at the main 2 principal components"
     - text: "It can be used to compare two (or more) groups of data"
+      correct: true
+    - text: "descriptors should be normalized before carrying out a PCA"
       correct: true
 
 question-02:
@@ -31,7 +33,7 @@ question-02:
       correct: true
     - text: "The contribution of a descriptor for a component depend on the cos2 of the descriptor for that component"
       correct: true
-    - text: "A descriptor's vector ending close to the center of a correlation circle means that the descriptor is badly described by the 2 principals components used"
+    - text: "A descriptor's vector ending close to the center of a correlation circle means that the descriptor is badly described by the 2 principal components used"
       correct: true
     - text: "Two vectors going into opposite directions are called correlated"
       
@@ -43,7 +45,7 @@ question-03:
   options:
     - text: "Using the cumulative component contributions inertia, we select principals components required to reach 80% of inertia"
       correct: true
-    - text: "There is as many principals components than descriptors"
+    - text: "There is as many principal components as descriptors but we usually analyse only a few of them"
       correct: true
     - text: "All components are orthogonal to eachother"
       correct: true
