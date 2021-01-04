@@ -1,0 +1,129 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-PCA-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About PCA"
+  options:
+    - text: "PCA is a dimensionality reduction tool"
+      correct: true
+    - text: "You don't lose any information by looking only at the main 2 principals components"
+    - text: "It can be used to compare two (or more) groups of data"
+      correct: true
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About the correlation circle"
+  options:
+    - text: "The correlation circle is used to see the correlation of descriptors with the components"
+      correct: true
+    - text: "The contribution of a descriptor for a component depend on the cos2 of the descriptor for that component"
+      correct: true
+    - text: "A descriptor's vector ending close to the center of a correlation circle means that the descriptor is badly described by the 2 principals components used"
+      correct: true
+    - text: "Two vectors going into opposite directions are called correlated"
+      
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About PCA"
+  options:
+    - text: "Using the cumulative component contributions inertia, we select principals components required to reach 80% of inertia"
+      correct: true
+    - text: "There is as many principals components than descriptors"
+      correct: true
+    - text: "All components are orthogonal to eachother"
+      correct: true
+      
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-PCA-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "How do we perform a PCA using prince module"
+  question_sequel: "The output of the PCA is stored in the variable PCA_object"
+  options:
+    - text: |
+        import prince
+        PCA_object = prince.PCA(dataframe)
+      type: CodeOption
+      correct: true
+    - text: |
+        import prince
+        PCA_object = dataframe.PCA()
+      type: CodeOption
+    - text: |
+        import prince
+        PCA_object = prince.PCA_toolkit.PCA(dataframe)
+      type: CodeOption
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which of the following is accurate ? code and commentary must match."
+  question_sequel: "PCA_object contains the PCA performed with prince"
+  options:
+    - text: |
+        # We want to visualize cumulative inertia in order select the relevent components for the analysis
+        PCA_object.plot_cumulative_inertia()
+      type: CodeOption
+      correct: true
+    - text: |
+        # We want to visualize individuals using the first 2 components
+        PCA_object.plot_rows(axes=[1,2])
+      type: CodeOption
+    - text: |
+        # We want to visualize individuals and color in function of a boolean descriptor
+        PCA_object.plot_rows(axes=[1,2], color_by='boolean_descriptor', ellipse_fill=True)
+      type: CodeOption
+      correct: true
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: |
+        What are the valid ways to plot the correlation circle ?
+  question_sequel: "PCA_object contains the PCA performed with prince"
+  options:
+    - text: |
+        import prince
+        prince.PCA.plot_correlation_circle(PCA_object)
+      type: CodeOption
+      correct: true
+    - text: |
+        import prince
+        PCA_object.plot_correlation_circle()
+      type: CodeOption
+      correct: true
+    - text: |
+        from prince import PCA
+        PCA.plot_correlation_circle(PCA_object)
+      type: CodeOption
+      correct: true
