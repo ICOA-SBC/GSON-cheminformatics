@@ -16,8 +16,7 @@ dependencies:
   - seaborn
   - wand=0.5.6
   - pip:
-    - chembl_webresource_client==0.10.0
+    - chembl_webresource_client==0.10.2
     - biopandas==0.2.5
     - pypdb==1.300
     - prince==0.2.6
-    - nbautoeval
