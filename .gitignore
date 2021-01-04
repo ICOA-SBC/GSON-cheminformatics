@@ -1,10 +1,10 @@
 
 *.png
 
-data/T2/EGFR_compounds_lipinski.csv
-
 cours_2/.ipynb_checkpoints/
 
 corrections/exercices/__pycache__/
 
 cours_1/.ipynb_checkpoints/
+
+corrections/exercices/.ipynb_checkpoints/
