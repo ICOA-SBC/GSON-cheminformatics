@@ -20,3 +20,4 @@ dependencies:
     - biopandas==0.2.5
     - pypdb==1.300
     - prince==0.2.6
+    - -e ./nbautoeval
