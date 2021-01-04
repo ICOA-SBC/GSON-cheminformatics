@@ -1,6 +1,6 @@
 theoric-quiz:
   type: Quiz
-  exoname: quiz-01
+  exoname: quiz-ADME-01
   shuffle: false
   max_attempts: 2
   max_grade: 3
@@ -13,7 +13,7 @@ question-01:
   type: QuizQuestion
   score: 1
   question:
-    text: "ADME stand for : "
+    text: "ADME stand for: "
   options:
     - text: "Adsorption, Distribution, Metabolism, and Excretion"
     - text: "Adsorption, Desorption, Metabolism, and Elimination"
@@ -48,7 +48,7 @@ question-03:
 
 code-quiz:
   type: Quiz
-  exoname: quiz-02
+  exoname: quiz-ADME-02
   shuffle: false
   max_attempts: 2
   max_grade: 3
