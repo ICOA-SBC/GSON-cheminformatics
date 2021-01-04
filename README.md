@@ -1,3 +1,7 @@
+Lancer le cours avec ce lien :
+https://mybinder.org/v2/gh/shalkya/GSON-cheminformatics-teacher/HEAD
+
+
 Plan des cours GSON
 ===================
 ___Organisation sur 20h des cours chimie informatique sous python :___
