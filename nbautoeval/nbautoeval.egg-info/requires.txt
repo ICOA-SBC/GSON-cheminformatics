@@ -1,0 +1,5 @@
+ipython
+ipywidgets
+numpy
+PyYAML
+myst_parser

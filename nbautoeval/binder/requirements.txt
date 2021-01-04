@@ -1,0 +1,8 @@
+# run-time
+ipython
+ipywidgets
+numpy
+PyYAML
+markdown-it-py
+# for the demo notebooks 
+jupytext
