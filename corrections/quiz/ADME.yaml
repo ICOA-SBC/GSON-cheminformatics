@@ -4,7 +4,7 @@ theoric-quiz:
   shuffle: false
   max_attempts: 2
   max_grade: 3
-  questions: 
+  questions:
     - question-01
     - question-02
     - question-03
@@ -43,7 +43,7 @@ question-03:
       correct: true
     - text: "It describes how hydrophobic is a molecule"
       correct: true
-      
+
 ##########################################################################
 
 code-quiz:
@@ -52,7 +52,7 @@ code-quiz:
   shuffle: false
   max_attempts: 2
   max_grade: 3
-  questions: 
+  questions:
     - question-04
     - question-05
     - question-06
