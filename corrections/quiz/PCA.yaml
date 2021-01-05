@@ -4,7 +4,7 @@ theoric-quiz:
   shuffle: false
   max_attempts: 2
   max_grade: 3
-  questions: 
+  questions:
     - question-01
     - question-02
     - question-03
@@ -36,7 +36,7 @@ question-02:
     - text: "A descriptor's vector ending close to the center of a correlation circle means that the descriptor is badly described by the 2 principal components used"
       correct: true
     - text: "Two vectors going into opposite directions are called correlated"
-      
+
 question-03:
   type: QuizQuestion
   score: 1
@@ -49,7 +49,7 @@ question-03:
       correct: true
     - text: "All components are orthogonal to eachother"
       correct: true
-      
+
 ##########################################################################
 
 code-quiz:
@@ -58,7 +58,7 @@ code-quiz:
   shuffle: false
   max_attempts: 2
   max_grade: 3
-  questions: 
+  questions:
     - question-04
     - question-05
     - question-06
