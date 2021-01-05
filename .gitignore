@@ -1,12 +1,4 @@
 
-*.png
+.ipynb_checkpoints/
 
-cours_2/.ipynb_checkpoints/
-
-corrections/exercices/__pycache__/
-
-cours_1/.ipynb_checkpoints/
-
-corrections/exercices/.ipynb_checkpoints/
-
-cours_3/.ipynb_checkpoints/T3_substructure_filtering_student-checkpoint.ipynb
+__pycache__/
