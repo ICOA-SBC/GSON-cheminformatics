@@ -1,6 +1,6 @@
 import math
 import pandas as pd
-from nbautoeval import ExerciseFunction, Args, PPrintCallRenderer
+from nbautoeval import ExerciseFunctionPandas, Args, PPrintCallRenderer
 
 
 def convert_nM(df):
@@ -46,7 +46,7 @@ inputs_convert_nM = [
     Args(bioact_df[['units', 'value']])
 ]
 
-exo_convert_nM = ExerciseFunction(
+exo_convert_nM = ExerciseFunctionPandas(
     convert_nM, inputs_convert_nM,
     call_renderer=PPrintCallRenderer(
         show_function=False,
@@ -74,7 +74,7 @@ inputs_calc_pIC50 = [
     Args(df_IC50[['IC50', 'units']])
 ]
 
-exo_calc_pIC50 = ExerciseFunction(
+exo_calc_pIC50 = ExerciseFunctionPandas(
     calc_pIC50, inputs_calc_pIC50,
     call_renderer=PPrintCallRenderer(
         show_function=False,
