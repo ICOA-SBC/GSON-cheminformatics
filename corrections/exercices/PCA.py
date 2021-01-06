@@ -1,11 +1,16 @@
 from rdkit import Chem
 from rdkit.Chem import PandasTools, Descriptors, rdMolDescriptors, Lipinski
 import pandas as pd
+<<<<<<< HEAD
 from nbautoeval import ExerciseFunction, Args, PPrintCallRenderer
 PandasTools.ChangeMoleculeRendering(renderer='String')
 
+=======
+from nbautoeval import ExerciseFunctionPandas, Args, PPrintCallRenderer
+>>>>>>> 1357f50e4fc81feca703f75543a8c567376a2b9e
 
 def get_frags_number(df):
+    PandasTools.ChangeMoleculeRendering(renderer='String')
     New_column = pd.DataFrame({'Frags_number': [len(Chem.rdmolops.GetMolFrags(mol)) for mol in df['ROMol']]})
     New_column = New_column.set_index(df.index)
     return New_column
@@ -19,17 +24,23 @@ inputs_frags_number = [
     Args(df_meds[['ROMol']])
 ]
 
-exo_frags_number = ExerciseFunction(
+exo_frags_number = ExerciseFunctionPandas(
     get_frags_number, inputs_frags_number,
     call_renderer=PPrintCallRenderer(
         show_function=False,
         css_properties={'word-wrap': 'break-word', 'max-width': '40em'},
     ))
+<<<<<<< HEAD
 
 # ________________________________________________________________________________
 
+=======
+
+# ________________________________________________________________________________
+>>>>>>> 1357f50e4fc81feca703f75543a8c567376a2b9e
 
 def get_descriptors(df):
+    PandasTools.ChangeMoleculeRendering(renderer='String')
     Lmol = df['ROMol']
     Ldescriptors = []
     for m in Lmol:
@@ -69,7 +80,7 @@ inputs_df_descriptors = [
     Args(df_PCA[['ROMol']])
 ]
 
-exo_df_descriptors = ExerciseFunction(
+exo_df_descriptors = ExerciseFunctionPandas(
     get_descriptors, inputs_df_descriptors,
     call_renderer=PPrintCallRenderer(
         show_function=False,
@@ -104,7 +115,11 @@ inputs_get_administration_type = [
     Args(df_meds[['oral', 'parenteral', 'topical']])
 ]
 
+<<<<<<< HEAD
 exo_get_administration_type = ExerciseFunction(
+=======
+exo_get_administration_type = ExerciseFunctionPandas(
+>>>>>>> 1357f50e4fc81feca703f75543a8c567376a2b9e
     get_administration_type, inputs_get_administration_type,
     call_renderer=PPrintCallRenderer(
         show_function=False,
