@@ -1,0 +1,147 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-T4-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about similarity"
+  options:
+    - text: "A new molecule highly similar to another molecule, with known activity on a target, should be active on the same target."
+      correct: true
+    - text: "There only one way to compare similarity between 2 compounds."
+    - text: "It is easy to estimate the similarity between any compound without using a computer."
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about molecular descriptors"
+  options:
+    - text: "The compound flexibility matters when we use 2D molecular descriptors."
+    - text: "We can still find new molecular descriptors to estimate similarity between compounds."
+      correct: true
+    - text: "Two molecules with a similar 1D descriptor can have different structures."
+      correct: true
+    - text: "Molecular descriptors can not be used in machine learning projects."
+
+
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about fingerprints"
+  options:
+    - text: "Molecular fingerprints are a computational representation of molecules"
+      correct: true
+    - text: "Molecular fingerprints encode chemical and molecular features in form of bitstrings, bitvectors or arrays"
+      correct: true
+    - text: "Usually, in a molecular fingerprint, \"0\" represents the presence and \"1\" the absence of a molecular feature"
+    - text: "Morgan fingerprints, also called squared fingerprints, the bits correspond to the squared environments of each atom in a molecule."
+
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about virtual screening"
+  options:
+    - text: "Virtual screening is based on computer-aided methods invoked to propose a focused list of small molecules to be tested"
+      correct: true
+    - text: "Virtual screening is more expensive than experimental screening"
+    - text: "Virtual screening always provides more accurate results than experimental screening"
+    - text: "Enrichment plots are used to validate virtual screening results"
+
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-T4-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is correct to generate MACCS fingerprint"
+  question_sequel: "mol is a molecular object containing a furosemide compound"
+  options:
+    - text: |
+        from rdkit import Chem
+        from rdkit.Chem import MACCSkeys
+        maccs_fp1 = MACCSkeys.GenMACCSKeys(mol)
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit import Chem
+        from rdkit.Chem import MACCSkeys
+        maccs_fp1 = MACCSkeys.MACCSKeys(mol)
+      type: CodeOption
+    - text: |
+        from rdkit import Chem
+        from rdkit.Chem import MACCSkeys
+        maccs_fp1 = mol.MACCSkeys.GenMACCSKeys()
+      type: CodeOption
+    - text: |
+        from rdkit import Chem
+        from rdkit.Chem import MACCSkeys
+        maccs_fp1 = mol.MACCSkeys.MACCSKeys()
+      type: CodeOption
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is correct to display the bits of a fingerprint"
+  question_sequel: "fp is a fingerprint object calculated on a molecule"
+  options:
+    - text: |
+        print(fp.ToBitString())
+      type: CodeOption
+      correct: true
+    - text: |
+        print(fp.BitToString())
+      type: CodeOption
+    - text: |
+        print(fp.StringToBit())
+      type: CodeOption
+
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is correct to calculate Tanimoto similarity between 2 molecules"
+  question_sequel: "fp1 and fp2 are 2 fingerprint objects calculated on 2 molecules."
+  options:
+    - text: |
+        from rdkit import DataStructs
+        DataStructs.TanimotoSimilarity(fp1, fp2)
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit import DataStructs
+        DataStructs.DiceSimilarity(fp1, fp2)
+      type: CodeOption
+    - text: |
+        from rdkit import DataStructs
+        DataStructs.TverskySimilarity(fp1, fp2)
+      type: CodeOption
+    - text: |
+        from rdkit import DataStructs
+        rdkit.TanimotoSimilarity(fp1, fp2)
+      type: CodeOption
