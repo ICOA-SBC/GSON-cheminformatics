@@ -1,0 +1,149 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-T1_ChEMBL-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about the ChEMBL Database"
+  options:
+    - text: "ChEMBL is a manually curated database of bioactive molecules with drug-like properties."
+      correct: true
+    - text: "ChEMBL is a manually curated database of inorganic molecules."
+    - text: "ChEMBL can be used to download information about targets associated to a bioactivity test."
+      correct: true
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about data contained in ChEMBL Database"
+  options:
+    - text: "Data contained in the ChEMBL is well standardised and ready to be directly used in drug design projects."
+    - text: "Downloading data from the ChEMBL requires an account and is not free."
+    - text: "Data stored in the ChEMBL comes from experimental studies described in scientific litterature"
+      correct: true
+
+
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following statements, which is true about compound activity"
+  options:
+    - text: "An active molecule inhibits a target which can be a protein"
+      correct: true
+    - text: "IC50 is the half maximal inhibitory concentration of a molecule"
+      correct: true
+    - text: "A molecule with a high IC50 is more active than a molecule with a low IC50"
+
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-T1_ChEMBL-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following code lines, which is correct to a column of molecules in a dataframe"
+  options:
+  question_sequel: "df is a Pandas dataframe having a column called 'smiles'"
+  options:
+    - text: |
+        from rdkit.Chem import PandasTools
+        PandasTools.AddMoleculeColumnToFrame(df, smilesCol='smiles')
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit.Chem import PandasTools
+        PandasTools.AddMoleculeColumnToDataframe(df, smilesCol='smiles')
+      type: CodeOption
+    - text: |
+        import pandas as pd
+        pd.AddMolecule(df, smilesCol='smiles')
+      type: CodeOption
+    - text: |
+        from rdkit.Chem import PandasTools
+        PandasTools.AddMolecule(df, smilesCol='smiles')
+      type: CodeOption
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following code lines, which is correct to get information on a target from its uniprot ID"
+  options:
+    - text: |
+        import pandas as pd
+        from chembl_webresource_client.new_client import new_client
+        targets = new_client.target
+        uniprot_id = 'P00533'
+        target_P00533 = targets.get(target_components__accession=uniprot_id)
+        pd.DataFrame.from_records(target_P00533)
+      type: CodeOption
+      correct: true
+    - text: |
+        import pandas as pd
+        from chembl_webresource_client.new_client import new_client
+        targets = new_client.target
+        target_P00533 = targets.get(target_components__accession='P00533')
+        pd.DataFrame.from_records(target_P00533)
+      type: CodeOption
+      correct: true
+    - text: |
+        import pandas as pd
+        from chembl_webresource_client.new_client import new_client
+        targets = new_client.target
+        uniprot_id = 'P00533'
+        target_P00533 = targets.get(target_chembl_id=uniprot_id)
+        pd.DataFrame.from_records(target_P00533)
+      type: CodeOption
+    - text: |
+        import pandas as pd
+        from chembl_webresource_client.new_client import new_client
+        targets = new_client.target
+        target_P00533 = targets.get(target_chembl_id='P00533')
+        pd.DataFrame.from_records(target_P00533)
+      type: CodeOption
+
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Among the following code lines, which is correct to get pIC50"
+  options:
+    - text: |
+        import math
+        IC50 = float(1000)
+        pIC50 = 9 - math.log10(IC50)
+      type: CodeOption
+      correct: true
+    - text: |
+        import math
+        IC50 = 1000
+        pIC50 = 9 - math.log10(float(IC50))
+      type: CodeOption
+      correct: true
+    - text: |
+        import math
+        pIC50 = 9 - math.log10(float(1000))
+      type: CodeOption
+      correct: true
