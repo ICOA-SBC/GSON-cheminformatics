@@ -1,11 +1,7 @@
 from rdkit import Chem
 from rdkit.Chem import Descriptors
 import pandas as pd
-<<<<<<< HEAD
-from nbautoeval import ExerciseFunction, Args, PPrintCallRenderer
-=======
 from nbautoeval import ExerciseFunction, Args, PPrintCallRenderer, ExerciseFunctionPandas
->>>>>>> 1357f50e4fc81feca703f75543a8c567376a2b9e
 
 # def rule_of_five(smiles_dict):
 #     Lcondition = [(name, True) if [Descriptors.ExactMolWt(Chem.MolFromSmiles(molecule)) <= 500, Descriptors.NumHAcceptors(Chem.MolFromSmiles(molecule)) <= 10, Descriptors.NumHDonors(Chem.MolFromSmiles(molecule)) <= 5, Descriptors.MolLogP(Chem.MolFromSmiles(molecule)) <= 5].count(True) >= 3 else (name, False) for name, molecule in smiles_dict.items()]
