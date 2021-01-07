@@ -1,0 +1,119 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-PAINS-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "PAINS means"
+  options:
+    - text: "Pan Aromatic Inhibitors Compounds"
+    - text: "Pan Assay Interference Compounds"
+      correct: true
+    - text: "Poly Aromatic Inhibitors Compounds"
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About PAINS molecules"
+  options:
+    - text: "They induce pain as a side effect of treatments"
+    - text: "They induce false positive in high throughput screening"
+      correct: true
+    - text: "They can be covalent modifiers, membrane disruptors, redox cyclers, metal complexers or unstable compounds"
+      correct: true
+
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About Brenk list"
+  options:
+    - text: "Polycyclic-aromatic-hydrocarbon (induce cancer), the nitro (mutagenic effect), thiols (reactive) or sulfate (poor pharmacokinetic properties) are in the Brenk list"
+      correct: true
+    - text: "They are undesired substructures of molecules for a drug development perspective"
+      correct: true
+    - text: "They are known to react unspecifically with numerous targets in various assays due to unspecific binding or interaction with assay components"
+      
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-PAINS-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which of the following code allow to draw molecules ?"
+  question_sequel: "df contains a panda dataframe, and ROMol is a column containing rdkit molecules"
+  options:
+    - text: |
+        from rdkit.Chem import Draw
+        Draw.MolsToGridImage(list(df.ROMol),
+                    molsPerRow=4)
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit.Chem import Draw
+        GridImage.Draw(df.ROMol),
+                    molsPerRow=4)
+      type: CodeOption
+    - text: |
+        from rdkit import Images
+        Images(list(df.ROMol))
+      type: CodeOption
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "How to count the unique entries in a column ?"
+  question_sequel: "df contains a panda dataframe, and unwantedID is a column"
+  options:
+    - text: |
+        df.unwantedID.value_counts()
+      type: CodeOption
+      correct: true
+    - text: |
+        Count(df.unwantedID)
+      type: CodeOption
+    - text: |
+        Count_values(df['unwantedID'])
+      type: CodeOption
+      correct: true
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "How do you access the 3rd row of a dataframe ?"
+  question_sequel: "df is a dataframe of 100 rows, having index going from 1 to 100"
+  options:
+    - text: |
+        df.loc[2]
+      type: CodeOption
+    - text: |
+        df.iloc[2]
+      type: CodeOption
+      correct: true
+    - text: |
+        df[2:3]
+      type: CodeOption
+      correct: true
