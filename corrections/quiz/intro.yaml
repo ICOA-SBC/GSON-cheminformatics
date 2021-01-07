@@ -1,0 +1,271 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-intro-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about Python"
+  question_sequel:
+    text: "This is an example of theoric quiz, tick the correct answer to mark them true."
+  options:
+    - text: "Python is a programming language which can be used and is popular in datascience."
+      correct: true
+    - text: "Python is a high-level programming language meaning that it is not easily readable by human beings."
+    - text: "Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc)."
+      correct: true
+    - text: "Python programs must always be written in french."
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about Jupyter notebooks"
+  options:
+    - text: "Jupyter Notebook is an open-source web application."
+      correct: true
+    - text: "Notebooks allow writing text, executing functions and seeing results in the same interface."
+      correct: true
+    - text: "Jupyter notebooks provide a source code editor and a debugger."
+    - text: "Jupyter notebooks are easily shareable."
+      correct: true
+
+question-03:
+  type: QuizQuestion
+  question:
+    text: "Which among the following statements is/are true about Python"
+  options:
+    - text: "The \"if\" statement allow executing a part of the program if a condition is respected."
+      correct: true
+    - text: "A \"for\" loop does not always need a start and stop."
+    - text: "Matplotlib is a library for creating interactive visualizations in Python."
+      correct: true
+    - text: "The Python philosophy can be resumed by: Complex is better than simple."
+
+theoric-quiz_cheminf:
+  type: Quiz
+  exoname: quiz-intro-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about RDkit"
+  options:
+    - text: "RDkit is an open source cheminformatics software."
+      correct: true
+    - text: "RDkit can draw a representation of a molecule from a IUPAC nomenclature."
+    - text: "RDkit is useful to convert molecules from one format to another (e.g. Smiles to Inchi)"
+      correct: true
+    - text: "RDkit can deal with 3D structures of molecules."
+      correct: true
+
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about SMILES representation"
+  options:
+    - text: "SMILES representation is a one line string that encodes the 3D structure of a molecule"
+    - text: "In a SMILES, double bonds are \"=\" and triple bonds are \"#\""
+      correct: true
+    - text: "All atoms can be encoded in a SMILES"
+      correct: true
+    - text: "Aromaticity of molecules is encoded by lower-case letters in SMILES"
+      correct: true
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about Pandas dataframes"
+  options:
+    - text: "Pandas is an open source data analysis and manipulation Python tool"
+      correct: true
+    - text: "Pandas dataframes allows to import data in tables from CSV files"
+      correct: true
+    - text: "Pandas is never used in data science"
+    - text: "Pandas dataframes allows to calculates basic statistics easily."
+      correct: true
+
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-intro-03
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-07
+    - question-08
+
+question-07:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is/are correct concerning for loops"
+  options:
+    - text: |
+        for line in range(10):
+            print(line)
+      type: CodeOption
+      correct: true
+    - text: |
+        for range in line(10):
+            print(range)
+      type: CodeOption
+    - text: |
+        for print in range(10):
+            range(print)
+      type: CodeOption
+    - text: |
+        for line in range('10'):
+            print(line)
+      type: CodeOption
+
+question-08:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is/are correct concerning if statement"
+  question_sequel:
+    text: "number is a variable entered by the user."
+  options:
+    - text: |
+        if number == 5:
+            print("It's five")
+        elif number == 7:
+            print("It's seven")
+        else:
+            print("It's not five or seven")
+      type: CodeOption
+      correct: true
+    - text: |
+        if number == 1:
+            print("It's five")
+        elif number == 3:
+            print("It's seven")
+        else:
+            print("It's not five or seven")
+      type: CodeOption
+      correct: true
+    - text: |
+        if number != 1:
+            print("It's five")
+        elif number != 3:
+            print("It's seven")
+        else:
+            print("It's not five or seven")
+      type: CodeOption
+      correct: true
+    - text: |
+        if number != 1:
+            print(It's five)
+        elif number != 3:
+            print(It's seven)
+        else:
+            print("It's not five or seven")
+      type: CodeOption
+
+
+code-quiz_cheminf:
+  type: Quiz
+  exoname: quiz-intro-04
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-09
+    - question-10
+    - question-11
+
+question-09:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is/are correct about RDKit"
+  question_sequel:
+    text: "from rdkit import Chem"
+  options:
+    - text: |
+        mol = Chem.MolFromSmiles('n1ccccc1')
+      type: CodeOption
+      correct: true
+    - text: |
+        mol = Mol.From.Smiles('n1ccccc1')
+      type: CodeOption
+    - text: |
+        mol = Chem.MolFromSmiles('CCCCC')
+        print(Chem.MolToMolBlock(mol))
+      type: CodeOption
+      correct: true
+    - text: |
+        mol = Chem.MolFromSmiles('CCCCC')
+        print(Chem.MolBlockToMol(mol))
+      type: CodeOption
+
+question-10:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is/are correct about SMILES"
+  options:
+    - text: |
+        'n1ccccc1'
+      type: CodeOption
+      correct: true
+    - text: |
+        'n1c+cc*cc1'
+      type: CodeOption
+    - text: |
+        '[NH2+]1CCCC1C([O-])=O'
+      type: CodeOption
+      correct: true
+    - text: |
+        'O/C=C\Cl'
+      type: CodeOption
+      correct: true
+
+question-11:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following code lines is/are correct about Pandas dataframes"
+  question_sequel:
+    text: "import pandas as pd"
+  options:
+    - text: |
+        df_meds=pd.DataFrame()
+        df_meds['ID'] = ['Aspirin', 'Paracetamol', 'Ibuprofen']
+      type: CodeOption
+      correct: true
+    - text: |
+        df_meds=pd.DataFrame
+        df_meds['ID'] = ['Aspirin', 'Paracetamol', 'Ibuprofen']
+      type: CodeOption
+    - text: |
+        df_meds=pd.DataFrame()
+        df_meds['Mol_Name'] = ['Aspirin', 'Paracetamol', 'Ibuprofen']
+      type: CodeOption
+      correct: true
+    - text: |
+        df_meds=pandas
+        df_meds['ID'] = ['Aspirin', 'Paracetamol', 'Ibuprofen']
+      type: CodeOption
