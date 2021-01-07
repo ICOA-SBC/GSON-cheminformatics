@@ -97,7 +97,6 @@ question-05:
     - text: |
         Count_values(df['unwantedID'])
       type: CodeOption
-      correct: true
 
 question-06:
   type: QuizQuestion
