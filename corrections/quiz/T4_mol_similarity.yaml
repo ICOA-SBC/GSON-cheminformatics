@@ -13,7 +13,7 @@ question-01:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about similarity"
+    text: "Which among the following statements is/are true about similarity"
   options:
     - text: "A new molecule highly similar to another molecule, with known activity on a target, should be active on the same target."
       correct: true
@@ -24,7 +24,7 @@ question-02:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about molecular descriptors"
+    text: "Which among the following statements is/are true about molecular descriptors"
   options:
     - text: "The compound flexibility matters when we use 2D molecular descriptors."
     - text: "We can still find new molecular descriptors to estimate similarity between compounds."
@@ -38,7 +38,7 @@ question-03:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about fingerprints"
+    text: "Which among the following statements is/are true about fingerprints"
   options:
     - text: "Molecular fingerprints are a computational representation of molecules"
       correct: true
@@ -52,7 +52,7 @@ question-04:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about virtual screening"
+    text: "Which among the following statements is/are true about virtual screening"
   options:
     - text: "Virtual screening is based on computer-aided methods invoked to propose a focused list of small molecules to be tested"
       correct: true
@@ -77,7 +77,7 @@ question-04:
   type: QuizQuestion
   score: 1
   question:
-    text: "Which among the following code lines is correct to generate MACCS fingerprint"
+    text: "Which among the following code lines is/are correct to generate MACCS fingerprint"
   question_sequel: "mol is a molecular object containing a furosemide compound"
   options:
     - text: |
@@ -106,7 +106,7 @@ question-05:
   type: QuizQuestion
   score: 1
   question:
-    text: "Which among the following code lines is correct to display the bits of a fingerprint"
+    text: "Which among the following code lines is/are correct to display the bits of a fingerprint"
   question_sequel: "fp is a fingerprint object calculated on a molecule"
   options:
     - text: |
@@ -125,7 +125,7 @@ question-06:
   type: QuizQuestion
   score: 1
   question:
-    text: "Which among the following code lines is correct to calculate Tanimoto similarity between 2 molecules"
+    text: "Which among the following code lines is/are correct to calculate Tanimoto similarity between 2 molecules"
   question_sequel: "fp1 and fp2 are 2 fingerprint objects calculated on 2 molecules."
   options:
     - text: |

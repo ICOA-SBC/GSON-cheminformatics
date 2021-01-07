@@ -13,7 +13,7 @@ question-01:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about the ChEMBL Database"
+    text: "Which among the following statements is/are true about the ChEMBL Database"
   options:
     - text: "ChEMBL is a manually curated database of bioactive molecules with drug-like properties."
       correct: true
@@ -25,7 +25,7 @@ question-02:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about data contained in ChEMBL Database"
+    text: "Which among the following statements is/are true about data contained in ChEMBL Database"
   options:
     - text: "Data contained in the ChEMBL is well standardised and ready to be directly used in drug design projects."
     - text: "Downloading data from the ChEMBL requires an account and is not free."
@@ -37,7 +37,7 @@ question-03:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following statements, which is true about compound activity"
+    text: "Which among the following statements is/are true about compound activity"
   options:
     - text: "An active molecule inhibits a target which can be a protein"
       correct: true
@@ -62,7 +62,7 @@ question-04:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following code lines, which is correct to a column of molecules in a dataframe"
+    text: "Which among the following code lines is/are correct to a column of molecules in a dataframe"
   options:
   question_sequel: "df is a Pandas dataframe having a column called 'smiles'"
   options:
@@ -88,7 +88,7 @@ question-05:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following code lines, which is correct to get information on a target from its uniprot ID"
+    text: "Which among the following code lines is/are correct to get information on a target from its uniprot ID"
   options:
     - text: |
         import pandas as pd
@@ -128,7 +128,7 @@ question-06:
   type: QuizQuestion
   score: 1
   question:
-    text: "Among the following code lines, which is correct to get pIC50"
+    text: "Which among the following code lines is/are correct to get pIC50"
   options:
     - text: |
         import math
