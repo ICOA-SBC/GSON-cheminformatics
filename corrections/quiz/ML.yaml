@@ -1,0 +1,119 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-ML-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-01
+    - question-02
+    - question-03
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About ML"
+  options:
+    - text: "Unsupervised methods are used to predict continuous-values"
+    - text: "Random forest, support vector machines and artificial neural network are supervised learning algorithms"
+      correct: true
+    - text: "Support vector machine are made of multiple decision trees"
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About performance measure"
+  options:
+    - text: "Sensitivity correspond to the True negative / All negative predicted"
+    - text: "The ROC curve plots True active identified against % Ranked dataset "
+    - text: "Area under the curve (AUC) correspond to the probability that a classifier will rank a randomly chosen positive instance higher than a negative one"
+      correct: true
+
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "About ML"
+  options:
+    - text: "The clustering methods are used to create groups of data"
+      correct: true
+    - text: "Classification and regression are both supervised methods"
+      correct: true
+    - text: "Maccs, ecfp4, the molecular weight and the logP are all fingerprints describing the molecules"
+      
+##########################################################################
+
+code-quiz:
+  type: Quiz
+  exoname: quiz-ML-02
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions: 
+    - question-04
+    - question-05
+    - question-06
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "which among the following code lines is/are used to calculate ecfp4 ?"
+  question_sequel: "RDMol is an rdkit object molecule"
+  options:
+    - text: |
+        from rdkit.Chem.AllChem import GetMorganFingerprintAsBitVect
+        GetMorganFingerprintAsBitVect(RDMol, radius = 2)
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit.Chem.AllChem import GetMorganFingerprintAsBitVect
+        GetMorganFingerprintAsBitVect(RDMol, radius = 3)
+      type: CodeOption
+    - text: |
+        from rdkit.Chem.AllChem import GetExtendedConnectivityFingerPrint
+        GetExtendedConnectivityFingerPrint(RDMol, diameter = 4)
+      type: CodeOption
+
+question-05:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "How to get an array of 5 values going from 0 to 2 included, with an increment of 0.5 ?"
+  question_sequel: "import numpy as np"
+  options:
+    - text: |
+        np.linspace(0, 2.0, 5)
+      type: CodeOption
+      correct: true
+    - text: |
+        np.arange(0, 2.1, 0.5)
+      type: CodeOption
+      correct: true
+    - text: |
+        [0:2:0.5]
+      type: CodeOption
+
+question-06:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "How to convert all smiles from a column into rdkit object molecules"
+  question_sequel: "df is a dataframe and smiles_col is a column containing smiles"
+  options: 
+    - text: |
+        from rdkit.Chem import MolFromSmiles
+        df.smiles_col.apply(MolFromSmiles)
+      type: CodeOption
+      correct: true
+    - text: |
+        from rdkit.Chem import MolFromSmiles
+        MolFromSmiles(df.smiles_col)
+      type: CodeOption
+    - text: |
+        from rdkit.Chem import MolFromSmiles
+        df['smiles_col'].apply(MolFromSmiles)
+      type: CodeOption
+      correct: true
