@@ -42,8 +42,14 @@ def convert_nM(df):
 bioact_df = pd.read_pickle('data/bioact_df_T1_ChEMBL.p')
 
 inputs_convert_nM = [
-    Args(bioact_df[['units', 'value']].sample(10)),
-    Args(bioact_df[['units', 'value']])
+    Args(bioact_df[bioact_df.units == 'uM'].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == 'nM'].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == 'M'].sample(2)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == "10'-1microM"].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == "10'1 uM"].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == "10'2 uM"].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == "/uM"].sample(4)[['value', 'units']]),
+    Args(bioact_df[bioact_df.units == "mM"].sample(2)[['value', 'units']]),
 ]
 
 exo_convert_nM = ExerciseFunctionPandas(
@@ -71,7 +77,10 @@ df_IC50 = pd.read_pickle('data/df_IC50_T1_ChEMBL.p')
 
 inputs_calc_pIC50 = [
     Args(df_IC50[['IC50', 'units']].sample(10)),
-    Args(df_IC50[['IC50', 'units']])
+    Args(df_IC50[['IC50', 'units']].sample(10)),
+    Args(df_IC50[['IC50', 'units']].sample(10)),
+    Args(df_IC50[['IC50', 'units']].sample(10)),
+    Args(df_IC50[['IC50', 'units']].sample(10))
 ]
 
 exo_calc_pIC50 = ExerciseFunctionPandas(

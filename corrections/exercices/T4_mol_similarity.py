@@ -1,70 +1,90 @@
-import math
 import pandas as pd
-from nbautoeval import ExerciseFunctionPandas, Args, PPrintCallRenderer
+from nbautoeval import ExerciseFunction, Args, PPrintCallRenderer
 
 
-def get_enrichment_data(similarity_df, similarity_measure, threshold):
+def calculate_enrichment_factor(enrichment, ranked_dataset_percentage_cutoff):
     """
-    This function calculates x and y values for enrichment plot:
-    x - % ranked dataset
-    y - % true actives identified
+    Get the experimental enrichment factor for a given percentage of the ranked dataset.
+
+    Parameters
+    ----------
+    enrichment : pd.DataFrame
+        Enrichment data: Percentage of ranked dataset by similarity vs. percentage of
+        identified true actives.
+    ranked_dataset_percentage_cutoff : float or int
+        Percentage of ranked dataset to be included in enrichment factor calculation.
+
+    Returns
+    -------
+    float
+        Experimental enrichment factor.
     """
 
-    # Get number of molecules in data set
-    mols_all = len(similarity_df)
-
-    # Get number of active compounds in data set
-    actives_all = sum(similarity_df.bioactivity >= threshold)
-
-    # Initialize a list that will hold the counter for actives and compounds while iterating through our dataset
-    actives_counter_list = []
-
-    # Initialize counter for actives
-    actives_counter = 0
-
-    # Note: Data must be ranked for enrichment plots:
-    # Sort compounds by selected similarity measure
-    similarity_df.sort_values([similarity_measure], ascending=False, inplace=True)
-
-    # Iterate over the ranked dataset and check each compound if active (by checking bioactivity)
-    for value in similarity_df.bioactivity:
-        if value >= threshold:
-            actives_counter += 1
-        actives_counter_list.append(actives_counter)
-
-    # Transform number of molecules into % ranked dataset
-    mols_perc_list = [i/mols_all for i in list(range(1, mols_all+1))]
-
-    # Transform number of actives into % true actives identified
-    actives_perc_list = [i/actives_all for i in actives_counter_list]
-
-    # Generate DataFrame with x and y values as well as label
-    enrich_df = pd.DataFrame({'% ranked dataset':mols_perc_list,
-                              '% true actives identified':actives_perc_list,
-                              'similarity_measure': similarity_measure})
-
-    return enrich_df
+    # Keep only molecules that meet the cutoff
+    enrichment = enrichment[
+        enrichment["% ranked dataset"] <= ranked_dataset_percentage_cutoff / 100
+    ]
+    # Get highest percentage of actives and the corresponding percentage of actives
+    highest_enrichment = enrichment.iloc[-1]
+    enrichment_factor = round(100 * float(highest_enrichment["% true actives identified"]), 1)
+    return enrichment_factor
 
 
-similarity_df = pd.read_pickle('data/similarity_df_T4.p')
+enrichment_data = pd.read_pickle('data/enrichment_data_T4.p')
 
-inputs_get_enrichment_data = [
-    Args(similarity_df[['ChEMBL_ID',
-                        'bioactivity',
-                        'tanimoto_morgan']], 'tanimoto_morgan', 6.3),
-    Args(similarity_df[['ChEMBL_ID',
-                        'bioactivity',
-                        'tanimoto_MACCS']], 'tanimoto_MACCS', 6.3),
-    Args(similarity_df[['ChEMBL_ID',
-                        'bioactivity',
-                        'dice_MACCS']], 'dice_MACCS', 6.3),
-    Args(similarity_df[['ChEMBL_ID',
-                        'bioactivity',
-                        'dice_morgan']], 'dice_morgan', 6.3),
+inputs_calc_EF = [
+    Args(enrichment_data["tanimoto_maccs"], 4),
+    Args(enrichment_data["tanimoto_maccs"], 5),
+    Args(enrichment_data["tanimoto_maccs"], 6),
+    Args(enrichment_data["tanimoto_morgan"], 4),
+    Args(enrichment_data["tanimoto_morgan"], 5),
+    Args(enrichment_data["tanimoto_morgan"], 6),
 ]
 
-exo_get_enrichment_data = ExerciseFunctionPandas(
-    get_enrichment_data, inputs_get_enrichment_data,
+exo_calc_EF = ExerciseFunction(
+    calculate_enrichment_factor, inputs_calc_EF,
+    call_renderer=PPrintCallRenderer(
+        show_function=False,
+        css_properties={'word-wrap': 'break-word', 'max-width': '40em'},
+    ))
+
+
+def calculate_enrichment_factor_optimal(molecules, ranked_dataset_percentage_cutoff, pic50_cutoff):
+    """
+    Get the optimal random enrichment factor for a given percentage of the ranked dataset.
+
+    Parameters
+    ----------
+    molecules : pandas.DataFrame
+        the DataFrame with all the molecules and pIC50.
+    ranked_dataset_percentage_cutoff : float or int
+        Percentage of ranked dataset to be included in enrichment factor calculation.
+    activity_cutoff: float
+        pIC50 cutoff value used to discriminate active and inactive molecules
+
+    Returns
+    -------
+    float
+        Optimal enrichment factor.
+    """
+
+    ratio = sum(molecules["pIC50"] >= pic50_cutoff) / len(molecules) * 100
+    if ranked_dataset_percentage_cutoff <= ratio:
+        enrichment_factor_optimal = round(100 / ratio * ranked_dataset_percentage_cutoff, 1)
+    else:
+        enrichment_factor_optimal = 100.0
+    return enrichment_factor_optimal
+
+molsim_df = pd.read_pickle('data/molsim_df_T4.p')
+
+inputs_calc_EF_opt = [
+    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 5, 6.3),
+    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 10, 6.3),
+    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 5, 10.0),
+]
+
+exo_calc_EF_opt = ExerciseFunction(
+    calculate_enrichment_factor_optimal, inputs_calc_EF_opt,
     call_renderer=PPrintCallRenderer(
         show_function=False,
         css_properties={'word-wrap': 'break-word', 'max-width': '40em'},
