@@ -8,6 +8,7 @@ theoric-quiz:
     - question-01
     - question-02
     - question-03
+    - question-04
 
 question-01:
   type: QuizQuestion
@@ -56,10 +57,10 @@ question-04:
   options:
     - text: "Virtual screening is based on computer-aided methods invoked to propose a focused list of small molecules to be tested"
       correct: true
-    - text: "Virtual screening is more expensive than experimental screening"
-    - text: "Virtual screening always provides more accurate results than experimental screening"
+    - text: "Virtual screening is more expensive and always provides more accurate results than experimental screening"
     - text: "Enrichment plots are used to validate virtual screening results"
-
+    - text: "A higher Enrichment Factor is obtained by a method that class more true active compounds in the top of ranked molecules"
+      correct: true
 ##########################################################################
 
 code-quiz:
@@ -69,11 +70,11 @@ code-quiz:
   max_attempts: 2
   max_grade: 3
   questions:
-    - question-04
     - question-05
     - question-06
+    - question-07
 
-question-04:
+question-05:
   type: QuizQuestion
   score: 1
   question:
@@ -102,7 +103,7 @@ question-04:
         maccs_fp1 = mol.MACCSkeys.MACCSKeys()
       type: CodeOption
 
-question-05:
+question-06:
   type: QuizQuestion
   score: 1
   question:
@@ -121,7 +122,7 @@ question-05:
       type: CodeOption
 
 
-question-06:
+question-07:
   type: QuizQuestion
   score: 1
   question:
