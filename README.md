@@ -68,15 +68,13 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
 - 2019: Colin, Gautier
 
-- 2020:
+- 2020: Gautier, Pierre-Yves
 
- - Gautier, Pierre-Yves
     - 21 students
     - Integration of TeachOpenCADD and binder
 
-- 2021:
+- 2021: Gautier, Pierre-Yves
 
-    - Gautier, Pierre-Yves
     - 22 students
     - Distance learning, via TEAMS
     - Integration of nbautoeval (Exercises and Quiz)
