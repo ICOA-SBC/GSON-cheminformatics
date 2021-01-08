@@ -79,9 +79,8 @@ molsim_df = pd.read_pickle('data/molsim_df_T4.p')
 
 inputs_calc_EF_opt = [
     Args(molsim_df[["molecule_chembl_id", "pIC50"]], 5, 6.3),
-    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 6, 6.3),
-    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 7, 6.3),
-    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 8, 6.3),
+    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 10, 6.3),
+    Args(molsim_df[["molecule_chembl_id", "pIC50"]], 5, 10.0),
 ]
 
 exo_calc_EF_opt = ExerciseFunction(
