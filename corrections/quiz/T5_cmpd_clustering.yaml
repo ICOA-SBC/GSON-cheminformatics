@@ -1,0 +1,68 @@
+theoric-quiz:
+  type: Quiz
+  exoname: quiz-T5-01
+  shuffle: false
+  max_attempts: 2
+  max_grade: 3
+  questions:
+    - question-01
+    - question-02
+    - question-03
+    - question-04
+
+question-01:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about compound clustering"
+  options:
+    - text: "Molecules in a cluster present more similary between eachother than with molecules from other clusters"
+      correct: true
+    - text: "There are many clustering algorithms available"
+      correct: true
+    - text: "Two molecules highly similar will be clustered in the same cluster"
+      correct: true
+    - text: "Clustering data are similarity between neighboring points"
+      correct: true
+
+question-02:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about compound clustering"
+  options:
+    - text: "In the Butina clustering, the similarity between two fingerprints is calculated using the Tanimoto coefficient."
+      correct: true
+    - text: "The similarities between all possible molecule pairs is calculated, providing a complete matrix"
+    - text: "Butina clustering was developed to identify bigger and heterogeneous clusters than Jarvis-Patrick algorithm."
+    - text: "A cutoff is used to keep more or less similar molecules in each clusters"
+      correct: true
+
+question-03:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about compound clustering"
+  options:
+    - text: "The minimal size of a cluster is one molecule"
+      correct: true
+    - text: "Jarvis-Patrick algorithm is able to deal with large sets of molecules in a matter of a few hours"
+      correct: true
+    - text: "Fingerprints are used to search clusters in large sets of molecules"
+      correct: true
+    - text: "Jarvis-Patrick uses a cutoff of similarity to adjust the number of molecules per clusters"
+
+
+question-04:
+  type: QuizQuestion
+  score: 1
+  question:
+    text: "Which among the following statements is/are true about Compound clustering"
+  options:
+    - text: "Picking diverse compounds is useful to reduce costs and time spent when searching for new drugs."
+      correct: true
+    - text: "Using a high cutoff in Butina clustering will create more clusters with few molecules on each."
+    - text: "Using a low cutoff in Butina clustering will create more clusters with few molecules on each."
+      correct: true
+    - text: "Molecules in a cluster usually have a big maximum common substructure."
+      correct: true
