@@ -9,13 +9,13 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 - Introduction
 
   - Slides 1_GSON_intro (30 min) PYL
-  - Slides 2_introduction_informatique (30 min) GP
-  - Talktorial Introductif 1 Intro Python, jupyter (40 min)  GP
-  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) GP
+  - Slides 2_introduction_informatique (30 min) XM
+  - Talktorial Introductif 1 Intro Python, jupyter (40 min)  XM
+  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
 **Mardi 12 janvier 10h-12h 13h30-15h30**
 
-- Data Acquisition (1h45-2h) GP
+- Data Acquisition (1h45-2h) XM
 
   - Talktorial 1 Data acquisition from ChEMBL
 
@@ -37,7 +37,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - Talktorial 3 Substructure removal : PAINS
 
-- Ligand based Screening (2h) GP
+- Ligand based Screening (2h) XM
 
   - Slides 5_fingerprint_similarity
   - Talktorial 4 Fingerprints and Molecular Similarity
@@ -46,7 +46,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
 **Jeudi 14 janvier 10h-12h 13h30-15h30**
 
-- Clustering (2h) GP
+- Clustering (2h) XM
 
   - Talktorial 5 : Compound clustering (1h)
   - Talktorial 6 : MCS (1h)
