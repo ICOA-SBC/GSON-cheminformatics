@@ -1,10 +1,11 @@
+This courses are mostly based of teachopencadd (https://github.com/volkamerlab/teachopencadd).
 Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
 
 GSON Chimie-informatique
 ========================
 ___Organisation of "GSON chimie informatique sous python" lessons :___
 
-**Lundi 11 janvier 2021 10h-12h 13h30-15h30**
+**Lundi 10 janvier 2021 10h-12h 13h30-15h30**
 
 - Introduction
 
@@ -13,7 +14,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
   - Talktorial Introductif 1 Intro Python, jupyter (40 min)  XM
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
-**Mardi 12 janvier 10h-12h 13h30-15h30**
+**Mardi 11 janvier 10h-12h 13h30-15h30**
 
 - Data Acquisition (1h45-2h) XM
 
@@ -31,7 +32,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
       - Slides 3_Intro_ACP
       - Notebook ACP
 
-**Mercredi 13 janvier 10h-12h 13h30-15h30**
+**Mercredi 12 janvier 10h-12h 13h30-15h30**
 
 - Filtering  (1h45) PYL
 
@@ -44,7 +45,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
 
 
-**Jeudi 14 janvier 10h-12h 13h30-15h30**
+**Jeudi 13 janvier 10h-12h 13h30-15h30**
 
 - Clustering (2h) XM
 
@@ -57,7 +58,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
   - Talktorial 7 Machine Learning (ROC curve) PYL
 
 
-**Vendredi 15 janvier 10h-12h 13h30-15h30**
+**Vendredi 14 janvier 10h-12h 13h30-15h30**
 
 - End of other lessons (2h)
 - Exam (2h)
