@@ -95,3 +95,15 @@ conda install mamba -n base -c conda-forge
 ```
 mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
+## What if ChEMBL web client import error?
+
+Simply update its version to 0.10.5 or later:
+
+First, activate the env:
+```
+conda activate teachopencadd
+```
+Second, install newer version using pip:
+```
+pip install chembl_webresource_client -U
+```
