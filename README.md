@@ -82,3 +82,10 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
     - Integration of nbautoeval (Exercises and Quiz)
 
 - 2022: Pierre-Yves, Xiaojun
+
+## How to install the anaconda env required for this course?
+
+```
+conda install mamba -n base -c conda-forge
+mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
+```
