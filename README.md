@@ -86,10 +86,12 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 ## How to install the anaconda env required for this course?
 
 Use ```mamba```:
+
 1st, install ```mamba``` and ```conda-forge``` channel:
 ```
 conda install mamba -n base -c conda-forge
 ```
 2nd, create env from given file:
+```
 mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
