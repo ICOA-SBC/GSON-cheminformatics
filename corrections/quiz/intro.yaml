@@ -101,7 +101,7 @@ question-06:
     - text: "Pandas dataframes allows to import data in tables from CSV files"
       correct: true
     - text: "Pandas is never used in data science"
-    - text: "Pandas dataframes allows to calculates basic statistics easily."
+    - text: "Pandas dataframes allows to calculate basic statistics easily."
       correct: true
 
 ##########################################################################
@@ -165,7 +165,6 @@ question-08:
         else:
             print("It's not five or seven")
       type: CodeOption
-      correct: true
     - text: |
         if number != 1:
             print("It's five")
@@ -174,7 +173,6 @@ question-08:
         else:
             print("It's not five or seven")
       type: CodeOption
-      correct: true
     - text: |
         if number != 1:
             print(It's five)
