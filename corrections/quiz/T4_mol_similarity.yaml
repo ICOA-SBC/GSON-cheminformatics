@@ -18,7 +18,7 @@ question-01:
   options:
     - text: "A new molecule highly similar to another molecule, with known activity on a target, should be active on the same target."
       correct: true
-    - text: "There only one way to compare similarity between 2 compounds."
+    - text: "There exists only one way to compare similarity between 2 compounds."
     - text: "It is easy to estimate the similarity between any compound without using a computer."
 
 question-02:
@@ -41,7 +41,7 @@ question-03:
   question:
     text: "Which among the following statements is/are true about fingerprints"
   options:
-    - text: "Molecular fingerprints are a computational representation of molecules"
+    - text: "Molecular fingerprints are computational representations of molecules"
       correct: true
     - text: "Molecular fingerprints encode chemical and molecular features in form of bitstrings, bitvectors or arrays"
       correct: true
