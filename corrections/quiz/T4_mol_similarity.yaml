@@ -59,6 +59,7 @@ question-04:
       correct: true
     - text: "Virtual screening is more expensive and always provides more accurate results than experimental screening"
     - text: "Enrichment plots are used to validate virtual screening results"
+      correct: true
     - text: "A higher Enrichment Factor is obtained by a method that class more true active compounds in the top of ranked molecules"
       correct: true
 ##########################################################################
