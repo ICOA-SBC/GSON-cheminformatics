@@ -28,14 +28,13 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-  - ACP (2h)
-
-      - Slides 3_Intro_ACP
-      - Notebook ACP
-
 **Mercredi 12 janvier 13h30-17h30**
 
-- Filtering  (1h) PYL
+- ACP (2h) PYL
+  - Slides 3_Intro_ACP
+  - Notebook ACP
+
+- Filtering (1h) PYL
 
   - Talktorial 3 Substructure removal : PAINS
 
@@ -43,8 +42,6 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - Slides 5_fingerprint_similarity
   - Talktorial 4 Fingerprints and Molecular Similarity
-
-
 
 **Jeudi 13 janvier 13h30-17h30**
 
@@ -57,7 +54,6 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) PYL
-
 
 **Vendredi 14 janvier 13h30-17h30**
 
@@ -82,6 +78,8 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
     - Integration of nbautoeval (Exercises and Quiz)
 
 - 2022: Pierre-Yves, Xiaojun
+    - 9 studentds (7 present, 2 absent)
+    - Introduce ```mamba``` for quicker env resolution
 
 ## How to install the anaconda env required for this course?
 
