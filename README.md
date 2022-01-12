@@ -17,25 +17,25 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
 **Mardi 11 janvier 13h30-17h30**
 
-- Data Acquisition (1h45-2h) XM
+- Data Acquisition (2h-2h30) XM
 
   - Talktorial 1 Data acquisition from ChEMBL
 
 - Filtering (1h45-2h) PYL
 
-  - Descriptors and ADME (1h15)
+  - Descriptors and ADME (1h30)
 
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-  - ACP (45 min)
+  - ACP (2h)
 
       - Slides 3_Intro_ACP
       - Notebook ACP
 
 **Mercredi 12 janvier 13h30-17h30**
 
-- Filtering  (1h45) PYL
+- Filtering  (1h) PYL
 
   - Talktorial 3 Substructure removal : PAINS
 
