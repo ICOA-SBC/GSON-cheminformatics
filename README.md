@@ -12,7 +12,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - Slides 1_GSON_intro (30 min) PYL
   - Slides 2_introduction_informatique (30 min) XM
-  - Talktorial Introductif 1 Intro Python, jupyter (40 min)  XM
+  - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
 **Mardi 11 janvier 13h30-17h30**
@@ -38,27 +38,29 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - Talktorial 3 Substructure removal : PAINS
 
-- Ligand based Screening (2h) XM
+- Ligand based Screening (2h45) XM
 
-  - Slides 5_fingerprint_similarity
-  - Talktorial 4 Fingerprints and Molecular Similarity
+  - Slides 5_fingerprint_similarity (45 mins)
 
 **Jeudi 13 janvier 13h30-17h30**
 
-- Clustering (2h) XM
+- Ligand based Screening (2h45) XM
 
-  - Talktorial 5 : Compound clustering (1h)
-  - Talktorial 6 : MCS (1h)
+  - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
-- Machine Learning (2h) PYL
+- Clustering (1h45) XM
+
+  - Talktorial 5 : Compound clustering (1h15)
+  - Talktorial 6 : MCS (30 min)
+
+**Vendredi 14 janvier 13h30-17h30**
+
+- Machine Learning (1h45) PYL
 
   - 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) PYL
 
-**Vendredi 14 janvier 13h30-17h30**
-
-- End of other lessons (2h)
-- Exam (2h)
+- Exam + correction explication (2h)
 
 ## History
 
@@ -80,7 +82,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 - 2022: Pierre-Yves, Xiaojun
     - 9 studentds (7 present, 2 absent)
     - Introduce ```mamba``` for quicker env resolution
-
+    - Added short introduction of Linux Commands 
 ## How to install the anaconda env required for this course?
 
 Use ```mamba```:
