@@ -4,9 +4,9 @@ Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](h
 
 GSON Chimie-informatique
 ========================
-___Organisation of "GSON chimie informatique sous python" lessons :___
+___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
 
-**Lundi 10 janvier 2022 13h30-17h30**
+**Lundi 9 janvier 2023 13h30-17h30**
 
 - Introduction
 
@@ -15,7 +15,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
   - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
-**Mardi 11 janvier 13h30-17h30**
+**Mardi 10 janvier 2023 08h30-12h30**
 
 - Data Acquisition (2h-2h30) XM
 
@@ -28,7 +28,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-**Mercredi 12 janvier 13h30-17h30**
+**Mercredi 11 janvier 2023 13h30-17h30**
 
 - ACP (2h) PYL
   - Slides 3_Intro_ACP
@@ -42,7 +42,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 
   - Slides 5_fingerprint_similarity (45 mins)
 
-**Jeudi 13 janvier 13h30-17h30**
+**Jeudi 12 janvier 2023 13h30-17h30**
 
 - Ligand based Screening (2h45) XM
 
@@ -53,11 +53,11 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
   - Talktorial 5 : Compound clustering (1h15)
   - Talktorial 6 : MCS (30 min)
 
-**Vendredi 14 janvier 13h30-17h30**
+**Vendredi 13 janvier 2023 13h30-17h30**
 
 - Machine Learning (1h45) PYL
 
-  - 6_Machine Learning
+  - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) PYL
 
 - Exam + correction explication (2h)
@@ -69,12 +69,10 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 - 2019: Colin, Gautier
 
 - 2020: Gautier, Pierre-Yves
-
     - 21 students
     - Integration of TeachOpenCADD and binder
 
 - 2021: Gautier, Pierre-Yves
-
     - 22 students
     - Distance learning, via TEAMS
     - Integration of nbautoeval (Exercises and Quiz)
@@ -82,16 +80,19 @@ ___Organisation of "GSON chimie informatique sous python" lessons :___
 - 2022: Pierre-Yves, Xiaojun
     - 9 studentds (7 present, 2 absent)
     - Introduce ```mamba``` for quicker env resolution
-    - Added short introduction of Linux Commands 
-## How to install the anaconda env required for this course?
+    - Added short introduction of Linux Commands
+
+- 2023: Pierre-Yves, Xiaojun
+
+## How to install the `conda` env required for this course?
 
 Use ```mamba```:
 
-1st, install ```mamba``` and ```conda-forge``` channel:
+1st step: install ```mamba``` and ```conda-forge``` channel:
 ```
 conda install mamba -n base -c conda-forge
 ```
-2nd, create env from given file:
+2nd step: create env from given file:
 ```
 mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
