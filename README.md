@@ -53,14 +53,14 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
   - Talktorial 5 : Compound clustering (1h15)
   - Talktorial 6 : MCS (30 min)
 
-**Vendredi 13 janvier 2023 13h30-17h30**
+**Vendredi 13 janvier 2023 08h30-12h30**
 
 - Machine Learning (1h45) PYL
 
   - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) PYL
 
-- Exam + correction explication (2h)
+- Exam (30 min) + correction explication (30 min)
 
 ## History
 
@@ -78,7 +78,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
     - Integration of nbautoeval (Exercises and Quiz)
 
 - 2022: Pierre-Yves, Xiaojun
-    - 9 studentds (7 present, 2 absent)
+    - 9 students (7 present, 2 absent)
     - Introduce ```mamba``` for quicker env resolution
     - Added short introduction of Linux Commands
 
@@ -96,7 +96,7 @@ conda install mamba -n base -c conda-forge
 ```
 mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
-## What if ChEMBL web client import error?
+## What if ChEMBL web client reports `import error`?
 
 Simply update its version to 0.10.5 or later:
 
