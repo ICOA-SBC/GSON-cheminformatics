@@ -1,20 +1,23 @@
 name: teachopencadd
 channels:
-  - rdkit
+  # rdkit
+  # rdkit channel was commented by XJM due to new channel priority default setting of conda, after conda version 4.14
   - samoturk
   - conda-forge
   - defaults
 dependencies:
-  - python=3.6.7
+  # most of the fixed conda package versions are elevated by XJM except for rdkit
+  - python
   - pip
-  - jupyter=1.0.0
-  - rdkit=2019.03.1
-  - pandas=0.24.2
+  - jupyter
+  # XJM tried rdkit version 2019.03.01 and 2021.03.5, but both have some small issue when running T3
+  - rdkit=2020.03.1
+  - pandas
   - pymol
-  - pmw=2.0.1
-  - scikit-learn=0.21.3
+  - pmw
+  - scikit-learn
   - seaborn
-  - wand=0.5.6
+  - wand
   - pip:
     - chembl_webresource_client==0.10.5
     - biopandas==0.2.5
