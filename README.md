@@ -83,28 +83,40 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
     - Added short introduction of Linux Commands
 
 - 2023: Pierre-Yves, Xiaojun
+    - Created a pre-course questionnaire to better adapt the course to future students attending the course
 
-## How to install the `conda` env required for this course?
+## Installation
 
-Use ```mamba```:
+Suppose that you are using Linux:
 
-1st step: install ```mamba``` and ```conda-forge``` channel:
+1. Install `miniconda`
+
+For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Install `mamba` in the `base` environment of `conda`, and set `conda-forge` channel as priority:
 ```
 conda install mamba -n base -c conda-forge
 ```
-2nd step: create env from given file:
+
+3. Create the virtual environment for this course from given file:
 ```
 mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
-## What if ChEMBL web client reports `import error`?
 
-Simply update its version to 0.10.5 or later:
+4. Clone the repo to your local PC:
+```
+git clone git@github.com:ICOA-SBC/GSON-cheminformatics.git
+```
 
-First, activate the env:
+5. Activate the virtual environment:
+
 ```
 conda activate teachopencadd
 ```
-Second, install newer version using pip:
-```
-pip install chembl_webresource_client -U
-```
+
+Voilà! You are ready to go.
+
+## What if `404 error` when launching `Binder`?
+`Binder` changed the default user interface from traditional `jupyter notebook` to `jupyter lab` in Feb, 2022.
+
+The quickest solution is to [change the ending of the Binder launcher address from `lab` to `tree`](https://discourse.jupyter.org/t/previous-built-binder-repo-suddenly-with-404-error/13047). After that, the traditional interface will come back.
