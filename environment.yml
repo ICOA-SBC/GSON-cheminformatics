@@ -7,7 +7,7 @@ channels:
   - defaults
 dependencies:
   # most of the fixed conda package versions are elevated by XJM except for rdkit
-  - python
+  - python=3.6.7
   - pip
   - jupyter
   # XJM tried rdkit version 2019.03.01 and 2021.03.5, but both have some small issue when running T3
