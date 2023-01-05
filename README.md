@@ -1,6 +1,6 @@
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).
 
-Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/)
 
 GSON Chimie-informatique
 ========================
