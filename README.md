@@ -105,7 +105,7 @@ mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformat
 
 4. Clone the repo to your local PC:
 ```
-git clone git@github.com:ICOA-SBC/GSON-cheminformatics.git
+git clone https://github.com/ICOA-SBC/GSON-cheminformatics
 ```
 
 5. Activate the virtual environment:
