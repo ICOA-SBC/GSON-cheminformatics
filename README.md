@@ -120,3 +120,15 @@ Voilà! You are ready to go.
 `Binder` changed the default user interface from traditional `jupyter notebook` to `jupyter lab` in Feb, 2022.
 
 The quickest solution is to [change the ending of the Binder launcher address from `lab` to `tree`](https://discourse.jupyter.org/t/previous-built-binder-repo-suddenly-with-404-error/13047). After that, the traditional interface will come back.
+
+## To roll-back to the original version, and update info in local repo
+1. In a terminal, `cd` to the folder where you cloned the repo, and run
+```
+git restore *
+```
+This will restore everything back to the state after just cloning
+
+2. To update your local repo, just pull from GitHub:
+```
+git pull
+```
