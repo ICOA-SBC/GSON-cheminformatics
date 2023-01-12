@@ -124,11 +124,18 @@ The quickest solution is to [change the ending of the Binder launcher address fr
 ## To roll-back to the original version, and update info in local repo
 1. In a terminal, `cd` to the folder where you cloned the repo, and run
 ```
+git status
+```
+Normally you will see some files that are created/modified during the last cours.
+
+2. Since we want to **all start from the same place**, we can run below command to **discard all the changes that have been made since cloning**:
+```
 git restore *
 ```
-This will restore everything back to the state after just cloning
+This will restore everything back to the state just after cloning.
 
-2. To update your local repo, just pull from GitHub:
+3. Update your local repo by pulling from GitHub:
 ```
 git pull
 ```
+You will have the most recent version of notebooks on your local PC.  
