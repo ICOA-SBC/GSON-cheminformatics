@@ -18,7 +18,7 @@ def calculate_fp(mol, method='maccs', n_bits=2048):
         return RDKFingerprint(mol, maxPath=5, fpSize=1024, nBitsPerHash=2)
 
 def print_fp(mol, method='maccs', n_bits=2048):
-    return(calculate_fp(mol, method='maccs', n_bits=2048).ToBitString())
+    return(calculate_fp(mol, method, n_bits).ToBitString())
 
 smiles_1 = MolFromSmiles('CC(=O)NC1=CC=C(C=C1)O')
 smiles_2 = MolFromSmiles('CN1CCN(CC1)C2=C3C=CC=CC3=NC4=C(N2)C=C(C=C4)C')
