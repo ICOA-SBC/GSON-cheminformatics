@@ -2,7 +2,7 @@ name: teachopencadd
 channels:
   # rdkit
   # rdkit channel was commented by XJM due to new channel priority default setting of conda, after conda version 4.14
-  - samoturk
+  # samoturk # XJM commented  2023.11 since no protein visualization needed in course
   - conda-forge
   - defaults
 dependencies:
@@ -13,11 +13,11 @@ dependencies:
   # XJM tried rdkit version 2019.03.01 and 2021.03.5, but both have some small issue when running T3
   - rdkit=2020.03.1
   - pandas
-  - pymol
-  - pmw
+  # pymol # XJM commented  2023.11 since no protein visualization needed in course
+  # pmw # XJM commented  2023.11 since no protein visualization needed in course
   - scikit-learn
   - seaborn
-  - wand
+  # wand # XJM commented  2023.11 since no protein visualization needed in course
   - pip:
     - chembl_webresource_client==0.10.5
     - biopandas==0.2.5
