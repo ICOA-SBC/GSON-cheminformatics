@@ -4,9 +4,9 @@ Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](h
 
 GSON Chimie-informatique
 ========================
-___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
+___Organisation of "GSON chimie informatique sous python" lessons, year 2024:___
 
-**Lundi 9 janvier 2023 13h30-17h30**
+**Lundi 15 janvier 2024 13h30-17h30**
 
 - Introduction
 
@@ -15,7 +15,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
   - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
-**Mardi 10 janvier 2023 08h30-12h30**
+**Mardi 16 janvier 2024 08h30-12h30**
 
 - Data Acquisition (2h-2h30) XM
 
@@ -28,7 +28,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-**Mercredi 11 janvier 2023 13h30-17h30**
+**Mercredi 17 janvier 2024 13h30-17h30**
 
 - ACP (2h) PYL
   - Slides 3_Intro_ACP
@@ -42,7 +42,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
 
   - Slides 5_fingerprint_similarity (45 mins)
 
-**Jeudi 12 janvier 2023 13h30-17h30**
+**Jeudi 18 janvier 2024 13h30-17h30**
 
 - Ligand based Screening (2h45) XM
 
@@ -53,7 +53,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
   - Talktorial 5 : Compound clustering (1h15)
   - Talktorial 6 : MCS (30 min)
 
-**Vendredi 13 janvier 2023 08h30-12h30**
+**Vendredi 19 janvier 2024 08h30-12h30**
 
 - Machine Learning (1h45) PYL
 
@@ -83,7 +83,11 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2023:___
     - Added short introduction of Linux Commands
 
 - 2023: Pierre-Yves, Xiaojun
+    - 5 students (4 present, 1 absent)
     - Created a pre-course questionnaire to better adapt the course to future students attending the course
+
+- 2024: Xiaojun, Jérémy
+    - ? students
 
 ## Installation
 
