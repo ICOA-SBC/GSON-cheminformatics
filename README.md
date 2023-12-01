@@ -1,6 +1,7 @@
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).
 
-Launch notebooks with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/)
+Launch notebooks in browser with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+This can take around 10 minutes, but does not require any kind of setup on your end.
 
 GSON Chimie-informatique
 ========================
