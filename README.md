@@ -1,6 +1,6 @@
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).
 
-Launch notebooks in browser with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+Launch notebooks in browser with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)\
 This can take around 10 minutes, but does not require any kind of setup on your end.
 
 GSON Chimie-informatique
@@ -88,7 +88,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2024:___
     - Created a pre-course questionnaire to better adapt the course to future students attending the course
 
 - 2024: Xiaojun, Jérémy
-    - ? students
+    - 16 students
 
 ## Installation
 
@@ -102,6 +102,8 @@ For installation details, please refer to their [official documentation](https:/
 ```
 conda install mamba -n base -c conda-forge
 ```
+Remark: Above step is **no longer necessary** if you are using `conda` version 23.10.0 or later, because `conda` introduced the solver same as `mamba` in this version.\
+For more details: https://github.com/conda/conda/releases
 
 3. Create the virtual environment for this course from given file:
 ```
@@ -119,7 +121,10 @@ git clone https://github.com/ICOA-SBC/GSON-cheminformatics
 conda activate teachopencadd
 ```
 
-Voilà! You are ready to go.
+Voilà! You are ready to go. Simply launch the notebook interface with command:
+```
+jupyter notebook
+```
 
 ## What if `404 error` when launching `Binder`?
 `Binder` changed the default user interface from traditional `jupyter notebook` to `jupyter lab` in Feb, 2022.
