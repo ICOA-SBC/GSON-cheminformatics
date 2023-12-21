@@ -1,31 +1,35 @@
-This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).
+GSON "chimie informatique sour python"
+========================================
 
-Launch notebooks in browser with Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)\
-This can take around 10 minutes, but does not require any kind of setup on your end.
+This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
+Huge thanks to them for providing such good learning material.
 
-GSON Chimie-informatique
-========================
-___Organisation of "GSON chimie informatique sous python" lessons, year 2024:___
+Launch notebooks directly in your browser:  
+
+- If you prefer the `jupyter lab` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+
+- Or if you prefer the traditional `jupyter notebook` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/)
+
+The materials are exactly the same. The only difference is the appearance.  
+Both can take around 10 minutes, but does not require any kind of setup on your machine.
+
+## Organisation of year 2023-2024
 
 **Lundi 15 janvier 2024 13h30-17h30**
 
 - Introduction
-
   - Slides 1_GSON_intro (30 min) PYL
   - Slides 2_introduction_informatique (30 min) XM
   - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
 
-**Mardi 16 janvier 2024 08h30-12h30**
+**Mardi 16 janvier 2024 13h30-17h30**
 
 - Data Acquisition (2h-2h30) XM
-
   - Talktorial 1 Data acquisition from ChEMBL
 
 - Filtering (1h45-2h) PYL
-
   - Descriptors and ADME (1h30)
-
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
@@ -36,28 +40,23 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2024:___
   - Notebook ACP
 
 - Filtering (1h) PYL
-
   - Talktorial 3 Substructure removal : PAINS
 
 - Ligand based Screening (2h45) XM
-
   - Slides 5_fingerprint_similarity (45 mins)
 
 **Jeudi 18 janvier 2024 13h30-17h30**
 
 - Ligand based Screening (2h45) XM
-
   - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
 - Clustering (1h45) XM
-
   - Talktorial 5 : Compound clustering (1h15)
   - Talktorial 6 : MCS (30 min)
 
-**Vendredi 19 janvier 2024 08h30-12h30**
+**Vendredi 19 janvier 2024 13h30-17h30**
 
 - Machine Learning (1h45) PYL
-
   - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) PYL
 
@@ -89,6 +88,7 @@ ___Organisation of "GSON chimie informatique sous python" lessons, year 2024:___
 
 - 2024: Xiaojun, Jérémy
     - 16 students
+    - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
 
 ## Installation
 
@@ -98,38 +98,26 @@ Suppose that you are using Linux:
 
 For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
 
-2. Install `mamba` in the `base` environment of `conda`, and set `conda-forge` channel as priority:
+2. Create the virtual environment for this course from given file:
 ```
-conda install mamba -n base -c conda-forge
-```
-Remark: Above step is **no longer necessary** if you are using `conda` version 23.10.0 or later, because `conda` introduced the solver same as `mamba` in this version.\
-For more details: https://github.com/conda/conda/releases
-
-3. Create the virtual environment for this course from given file:
-```
-mamba env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
+conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
 
-4. Clone the repo to your local PC:
+3. Open a terminal, and clone the repo to your local PC:
 ```
 git clone https://github.com/ICOA-SBC/GSON-cheminformatics
 ```
 
-5. Activate the virtual environment:
+4. Activate the virtual environment:
 
 ```
 conda activate teachopencadd
 ```
 
-Voilà! You are ready to go. Simply launch the notebook interface with command:
+5. You are ready to go. Simply launch the `notebook` interface with command:
 ```
 jupyter notebook
 ```
-
-## What if `404 error` when launching `Binder`?
-`Binder` changed the default user interface from traditional `jupyter notebook` to `jupyter lab` in Feb, 2022.
-
-The quickest solution is to [change the ending of the Binder launcher address from `lab` to `tree`](https://discourse.jupyter.org/t/previous-built-binder-repo-suddenly-with-404-error/13047). After that, the traditional interface will come back.
 
 ## To roll-back to the original version, and update info in local repo
 1. In a terminal, `cd` to the folder where you cloned the repo, and run
