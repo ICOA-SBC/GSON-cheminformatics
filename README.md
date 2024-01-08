@@ -96,12 +96,14 @@ Suppose that you are using Linux:
 
 1. Install `miniconda`
 
-For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
+- For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
 
-2. Create the virtual environment for this course from given file:
+2. Open a terminal, you should normally see `(base)` before your prompt. Create the virtual environment for this course from given file: 
 ```
 conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
+- This file contains a list of `conda`/`pip` packages that are required for this course.  
+- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
 
 3. Open a terminal, and clone the repo to your local PC:
 ```
@@ -113,6 +115,7 @@ git clone https://github.com/ICOA-SBC/GSON-cheminformatics
 ```
 conda activate teachopencadd
 ```
+- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
 
 5. You are ready to go. Simply launch the `notebook` interface with command:
 ```
