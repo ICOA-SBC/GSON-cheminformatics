@@ -140,3 +140,17 @@ This will restore everything back to the state just after cloning.
 git pull
 ```
 You will have the most recent version of notebooks on your local PC.  
+
+## What if you cannot find `conda` by typing `which conda`?
+
+Experience 2024:  
+In the computer room of COST, the `conda` is installed at `/opt/anaconda3`.  
+To easily use it, follow below steps:
+
+1. Open a terminal, and type `echo $PATH` to check the existing PATHS (normally you shoud not be able to find it)
+2. Type `gedit ~/.bashrc`. A text editor interface will automatically appear.
+3. Add `export PATH=/opt/anaconda3/bin:$PATH` to the end of the file, then save and close the file.
+4. Close all existing terminals, and open a new terminal.
+5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
+6. Type the command `conda init bash` to initiate it. 
+7. Close all existing terminals, and open a new terminal. You should now see `(bash)` before your prompt.
