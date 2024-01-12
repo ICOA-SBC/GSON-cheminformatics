@@ -4,7 +4,7 @@
 # ---------------------------------------------------------
 # Add Conda to PATH permanently for bash shells
 echo "Adding Conda to PATH in .bashrc..."
-echo "export PATH=/opt/anaconda3/bin:$PATH" >> ~/.bashrc
+echo 'export PATH=/opt/anaconda3/bin:$PATH' >> ~/.bashrc # use single quote to the literal string, not expanded $PATH 
 
 # Reload .bashrc
 source ~/.bashrc

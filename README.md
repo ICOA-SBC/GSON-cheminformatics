@@ -156,3 +156,16 @@ To easily use it, follow below steps:
 6. Type the command `conda init bash` to initiate it. 
 7. Reload the profile with `source ~/.bashrc`.  
 After all these steps, you should now see `(bash)` before your prompt.
+
+## A more automatic way:
+An `init.sh` script is also included in the repo. It automates all the 3 major steps:
+- export conda to $PATH
+- create environment
+- clone the repo
+
+To use it under Linux:
+- Download this file, and put it at your /home
+- Open a termina, and execute it by `bash init.sh`
+- This process will take ~3 mins (the resolution of environment may take extra time)
+- If the script success, you will need to close and open another terminal.
+Voilà! You are ready to go!
