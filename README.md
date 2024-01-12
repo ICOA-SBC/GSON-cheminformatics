@@ -152,7 +152,7 @@ To easily use it, follow below steps:
 2. Type `gedit ~/.bashrc`. A text editor interface will automatically appear.
 3. Add `export PATH=/opt/anaconda3/bin:$PATH` to the end of the file, then save and close the file.
 4. Reload the profile with `source ~/.bashrc`
-5. Close all existing terminals, and open a new terminal. (Optional)
-6. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
-7. Type the command `conda init bash` to initiate it. 
-8. Close all existing terminals, and open a new terminal. You should now see `(bash)` before your prompt.
+5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
+6. Type the command `conda init bash` to initiate it. 
+7. Reload the profile with `source ~/.bashrc`.  
+After all these steps, you should now see `(bash)` before your prompt.
