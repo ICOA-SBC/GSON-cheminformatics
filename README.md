@@ -96,7 +96,7 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 
 ## Installation
 
-Suppose that you are using Linux:
+Suppose that you are using **Linux** (**MacOS** should work the same way, since it is also **Unix**):
 
 1. Install `miniconda` (or `anaconda` if you prefer)
 - For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
@@ -160,13 +160,13 @@ To easily use it, follow below steps:
 7. Reload the profile with `source ~/.bashrc`.  
 After all these steps, you should now see `(bash)` before your prompt.
 
-Another solution provided by service info (which seems easier):
+### Another solution provided by service info (which seems easier, thus recommended):
 1. Open a terminal, and change to the directory where `conda` is installed: `cd /opt/anaconda3/bin`
 2. Initiate it by `./conda init`
 3. Close the terminal, and re-open a new one
 4. You should now see `(bash)` before your prompt
 
-### A more automatic way:
+### A more automatic way (WIP, since it requires restarting the terminal, it does not work for the moment):
 An `init.sh` script is also included in the repo. It automates all the 3 major steps:
 - export conda to $PATH
 - create environment
