@@ -60,8 +60,9 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
   - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) JM
 
-- Summary of the course (15 min)
-  - Slide 7_Applications JM
+- Summary of the course (30 min)
+  - Slide 7_Applications JM + XJM
+  - Q&A before exam
 
 - Exam (30 min) + correction explication (30 min)
 
@@ -173,8 +174,8 @@ An `init.sh` script is also included in the repo. It automates all the 3 major s
 - clone the repo
 
 To use it under Linux:
-- Download this file, and put it at your /home
-- Open a termina, and execute it by `bash init.sh`
+- Download this file, and put it at your `/home`
+- Open a terminal, and execute the downloaded script by `bash init.sh`
 - This process will take ~3 mins (the resolution of environment may take extra time)
 - If the script success, you will need to close and open another terminal
 
