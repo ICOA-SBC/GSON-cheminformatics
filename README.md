@@ -1,4 +1,4 @@
-GSON "chimie informatique sour python"
+GSON "chimie informatique sous Python"
 ========================================
 
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
@@ -12,6 +12,12 @@ Huge thanks to them for providing such good learning material.
 
 The materials are exactly the same. The only difference is the appearance.  
 Both can take around 10 minutes, but does not require any kind of setup on your machine.
+
+**Remarks:**  
+
+1. To save resources, your connection to the `Binder` server will be **automatically cut off** if you have no activity for around 10 mins
+
+2. Your changes to the notebooks will **NOT be saved**. So if you reconnect, you lose all what you have done previously...
 
 ## Organisation of year 2023-2024
 
@@ -100,33 +106,141 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 Suppose that you are using **Linux** (**MacOS** should work the same way, since it is also **Unix**):
 
 1. Install `miniconda` (or `anaconda` if you prefer)
+
 - For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
 
-2. Open a terminal, you should normally see `(base)` before your prompt. Create the virtual environment for this course from given file: 
-```
+2. Open a terminal, you should normally see `(base)` before your prompt. (See below FAQ part if you cannot see `(base)`)  
+Create the virtual environment for this course from given file:  
+
+```bash
 conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
 ```
+
 - This file contains a list of `conda`/`pip` packages that are required for this course.  
 - You are encouraged to check the content of this file, to make sure it does not contain malicious software.
 
 3. Open a terminal, and clone the repo to your local PC:
-```
+
+```bash
 git clone https://github.com/ICOA-SBC/GSON-cheminformatics
 ```
 
 4. Activate the virtual environment:
 
-```
+```bash
 conda activate teachopencadd
 ```
+
 - You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
 
 5. You are ready to go. Simply launch the `notebook` interface with command:
-```
+
+```bash
 jupyter notebook
 ```
 
-## To roll-back to the original version, and update info in local repo
+## FAQ
+
+### What if you cannot find `conda` by typing `which conda`, or you do not see `base` before your prompt?
+
+Experience 2024:  
+In the computer rooms of COST, `conda` is installed at `/opt/anaconda3`, not under each user's `/home`.  
+Furthermore, it is NOT added to the `$PATH`, making it unfindable by `which conda` command.  
+Even more, the `/home` of each student will be automatically deleted on the 2nd day of the course, after restarting the PC...(by default the PCs are automatically shut down during the night).  
+
+So it means the students have to repeat the steps of
+
+- initiate `conda`
+- create `conda` virtual environment
+- clone the course material
+
+from Tuesday to Friday, before each course starts (which is annoying!)  
+
+**Note for teachers:**  
+Perhaps switch to Windows from next year?
+
+## Special instructions for promo 2023-2024
+
+So here are the commands to follow, from Tuesday to Friday:
+
+1. Open a terminal, copy-paste below command into it, and execute it:
+
+```bash
+/opt/anaconda3/bin/conda init
+```
+
+2. Normally, the message of the terminal will suggest you to close and re-open the terminal after above command is executed successfully.  
+Simply close and re-open another terminal.  
+You should now see `(base)` on the leftmost of your prompt. (ask the teachers if you still cannot see it)  
+
+3. Create the virtual environment for this course from given file, by copy-paste below command into your terminal, and execute it: 
+
+```bash
+conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
+```
+
+- This file contains a list of `conda`/`pip` packages that are required for this course.  
+- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
+- This command will take 3-10 mins, depending on the configuration of your PC, and the Internet connection
+
+4. Once above command finishes with success, you can now clone the repo to your local PC, by copy-paste below command into your terminal, and execute it:
+
+```bash
+git clone https://github.com/ICOA-SBC/GSON-cheminformatics
+```
+
+5. Activate the virtual environment:
+
+```bash
+conda activate teachopencadd
+```
+
+- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
+
+6. You are ready to go. Simply launch the `notebook` interface with command:
+
+```bash
+jupyter notebook
+```
+
+### Work in progress, reserved for teachers
+
+1. Open a terminal, and type `echo $PATH` to check the existing PATHS (normally you shoud not be able to find `/opt/anaconda3`).
+2. Type `gedit ~/.bashrc`. A text editor interface will automatically appear.
+3. Add `export PATH=/opt/anaconda3/bin:$PATH` to the end of the file, then save and close the file.
+4. Reload the profile with `source ~/.bashrc`
+5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
+6. Type the command `conda init bash` to initiate it. 
+7. Reload the profile with `source ~/.bashrc`.  
+After all these steps, you should now see `(base)` before your prompt.
+
+### Another solution provided by service info (which seems easier, thus recommended):
+
+1. Open a terminal, and change to the directory where `conda` is installed: `cd /opt/anaconda3/bin`
+2. Initiate it by `./conda init`
+3. Close the terminal, and re-open a new one
+4. You should now see `(base)` before your prompt
+
+### A more automatic way (WIP, since it requires restarting the terminal, it does not work for the moment):
+
+An `init.sh` script is also included in the repo. It automates all the 3 major steps:
+
+- export conda to `$PATH`
+- create environment
+- clone the repo
+
+To use it under Linux:
+
+- Download this file, and put it at your `/home`
+- Open a terminal, and execute the downloaded script by `bash init.sh`
+- This process will take ~3 mins (the resolution of environment may take extra time)
+- If the script success, you will need to close and open another terminal
+
+Voilà! You are ready to go!
+
+## In case needed
+### To roll-back to the original version, and update info in local repo
+
 1. In a terminal, `cd` to the folder where you cloned the repo, and run
 ```
 git status
@@ -144,39 +258,3 @@ This will restore everything back to the state just after cloning.
 git pull
 ```
 You will have the most recent version of notebooks on your local PC.  
-
-## What if you cannot find `conda` by typing `which conda`?
-
-Experience 2024:  
-In the computer rooms of COST, `conda` is installed at `/opt/anaconda3`, not under each user's `/home`.  
-Furthermore, it is NOT added to the `$PATH`, making it unfindable by `which conda` command.  
-To easily use it, follow below steps:
-
-1. Open a terminal, and type `echo $PATH` to check the existing PATHS (normally you shoud not be able to find `/opt/anaconda3`).
-2. Type `gedit ~/.bashrc`. A text editor interface will automatically appear.
-3. Add `export PATH=/opt/anaconda3/bin:$PATH` to the end of the file, then save and close the file.
-4. Reload the profile with `source ~/.bashrc`
-5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
-6. Type the command `conda init bash` to initiate it. 
-7. Reload the profile with `source ~/.bashrc`.  
-After all these steps, you should now see `(bash)` before your prompt.
-
-### Another solution provided by service info (which seems easier, thus recommended):
-1. Open a terminal, and change to the directory where `conda` is installed: `cd /opt/anaconda3/bin`
-2. Initiate it by `./conda init`
-3. Close the terminal, and re-open a new one
-4. You should now see `(bash)` before your prompt
-
-### A more automatic way (WIP, since it requires restarting the terminal, it does not work for the moment):
-An `init.sh` script is also included in the repo. It automates all the 3 major steps:
-- export conda to $PATH
-- create environment
-- clone the repo
-
-To use it under Linux:
-- Download this file, and put it at your `/home`
-- Open a terminal, and execute the downloaded script by `bash init.sh`
-- This process will take ~3 mins (the resolution of environment may take extra time)
-- If the script success, you will need to close and open another terminal
-
-Voilà! You are ready to go!
