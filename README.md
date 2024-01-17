@@ -19,6 +19,52 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 
 2. Your changes to the notebooks will **NOT be saved**. So if you reconnect, you lose all what you have done previously...
 
+## Special instructions for promo 2023-2024
+
+If you are using `Windows` on your own PC, before each course, please execute the command `git pull` in your terminal, to get the latest version of material.
+
+If you are using the `Linux` session on the PCs of "salle info", here are the commands to follow, from Tuesday to Friday:
+
+1. Open a terminal, copy-paste below command into it, and execute it:
+
+```bash
+/opt/anaconda3/bin/conda init
+```
+
+2. Normally, the message of the terminal will suggest you to close and re-open the terminal after above command is executed successfully.  
+Simply close and re-open another terminal.  
+You should now see `(base)` on the leftmost of your prompt. (ask the teachers if you still cannot see it)  
+
+3. Create the virtual environment for this course from given file, by copy-paste below command into your terminal, and execute it: 
+
+```bash
+conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
+```
+
+- This file contains a list of `conda`/`pip` packages that are required for this course.  
+- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
+- This command will take 3-10 mins, depending on the configuration of your PC, and the Internet connection
+
+4. Once above command finishes with success, you can now clone the repo to your local PC, by copy-paste below command into your terminal, and execute it:
+
+```bash
+git clone https://github.com/ICOA-SBC/GSON-cheminformatics
+```
+
+5. Activate the virtual environment:
+
+```bash
+conda activate teachopencadd
+```
+
+- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
+
+6. You are ready to go. Simply launch the `notebook` interface with command:
+
+```bash
+jupyter notebook
+```
+
 ## Organisation of year 2023-2024
 
 **Lundi 15 janvier 2024 13h30-17h30**
@@ -159,49 +205,6 @@ from Tuesday to Friday, before each course starts (which is annoying!)
 **Note for teachers:**  
 Perhaps switch to Windows from next year?
 
-## Special instructions for promo 2023-2024
-
-So here are the commands to follow, from Tuesday to Friday:
-
-1. Open a terminal, copy-paste below command into it, and execute it:
-
-```bash
-/opt/anaconda3/bin/conda init
-```
-
-2. Normally, the message of the terminal will suggest you to close and re-open the terminal after above command is executed successfully.  
-Simply close and re-open another terminal.  
-You should now see `(base)` on the leftmost of your prompt. (ask the teachers if you still cannot see it)  
-
-3. Create the virtual environment for this course from given file, by copy-paste below command into your terminal, and execute it: 
-
-```bash
-conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
-```
-
-- This file contains a list of `conda`/`pip` packages that are required for this course.  
-- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
-- This command will take 3-10 mins, depending on the configuration of your PC, and the Internet connection
-
-4. Once above command finishes with success, you can now clone the repo to your local PC, by copy-paste below command into your terminal, and execute it:
-
-```bash
-git clone https://github.com/ICOA-SBC/GSON-cheminformatics
-```
-
-5. Activate the virtual environment:
-
-```bash
-conda activate teachopencadd
-```
-
-- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
-
-6. You are ready to go. Simply launch the `notebook` interface with command:
-
-```bash
-jupyter notebook
-```
 
 ### Work in progress, reserved for teachers
 
