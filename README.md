@@ -1,5 +1,4 @@
-GSON "chimie informatique sous Python"
-========================================
+GSON "chimie informatique sous python"
 
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
 Huge thanks to them for providing such good learning material.
@@ -70,10 +69,10 @@ jupyter notebook
 **Lundi 15 janvier 2024 13h30-17h30**
 
 - Introduction
-  - Slides 1_GSON_intro (30 min) JM
+  - Slides 1_GSON_intro (30 min) XM & JM
   - Slides 2_introduction_informatique (30 min) XM
   - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
-  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
+  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) JM
 
 **Mardi 16 janvier 2024 13h30-17h30**
 
@@ -91,7 +90,7 @@ jupyter notebook
   - Slides 3_Intro_ACP
   - Notebook ACP
 
-- Filtering (1h) JM
+- Filtering (1h) XM
   - Talktorial 3 Substructure removal : PAINS
 
 - Ligand based Screening (2h45) XM
@@ -99,7 +98,7 @@ jupyter notebook
 
 **Jeudi 18 janvier 2024 13h30-17h30**
 
-- Ligand based Screening (2h45) XM
+- Ligand based Screening (2h45) JM
   - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
 - Clustering (1h45) XM
@@ -112,9 +111,8 @@ jupyter notebook
   - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve) JM
 
-- Summary of the course (30 min)
-  - Slide 7_Applications JM + XJM
-  - Q&A before exam
+- Applications in chemoinformatic  (30 min) XM & JM
+  - Slides 7_Applications
 
 - Exam (30 min) + correction explication (30 min)
 
@@ -143,7 +141,7 @@ jupyter notebook
     - Created a pre-course questionnaire to better adapt the course to future students attending the course
 
 - 2024: Xiaojun, Jérémy
-    - 16 students
+    - 17 students
     - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
     - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
 
