@@ -1,4 +1,4 @@
-GSON "chimie informatique sour python"
+GSON "chimie informatique sous python"
 ========================================
 
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
@@ -18,28 +18,28 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 **Lundi 15 janvier 2024 13h30-17h30**
 
 - Introduction
-  - Slides 1_GSON_intro (30 min) PYL
+  - Slides 1_GSON_intro (30 min) XM & JM
   - Slides 2_introduction_informatique (30 min) XM
   - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
-  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) XM
+  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) JM
 
 **Mardi 16 janvier 2024 13h30-17h30**
 
 - Data Acquisition (2h-2h30) XM
   - Talktorial 1 Data acquisition from ChEMBL
 
-- Filtering (1h45-2h) PYL
+- Filtering (1h45-2h) JM
   - Descriptors and ADME (1h30)
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
 **Mercredi 17 janvier 2024 13h30-17h30**
 
-- ACP (2h) PYL
+- ACP (2h) JM
   - Slides 3_Intro_ACP
   - Notebook ACP
 
-- Filtering (1h) PYL
+- Filtering (1h) XM
   - Talktorial 3 Substructure removal : PAINS
 
 - Ligand based Screening (2h45) XM
@@ -47,7 +47,7 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 
 **Jeudi 18 janvier 2024 13h30-17h30**
 
-- Ligand based Screening (2h45) XM
+- Ligand based Screening (2h45) JM
   - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
 - Clustering (1h45) XM
@@ -56,9 +56,12 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
 
 **Vendredi 19 janvier 2024 13h30-17h30**
 
-- Machine Learning (1h45) PYL
+- Machine Learning (1h45) JM
   - Slides 6_Machine Learning
-  - Talktorial 7 Machine Learning (ROC curve) PYL
+  - Talktorial 7 Machine Learning (ROC curve) JM
+
+- Applications in chemoinformatic  (30 min) XM & JM
+  - Slides 7_Applications
 
 - Exam (30 min) + correction explication (30 min)
 
@@ -87,7 +90,7 @@ Both can take around 10 minutes, but does not require any kind of setup on your 
     - Created a pre-course questionnaire to better adapt the course to future students attending the course
 
 - 2024: Xiaojun, Jérémy
-    - 16 students
+    - 17 students
     - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
 
 ## Installation
