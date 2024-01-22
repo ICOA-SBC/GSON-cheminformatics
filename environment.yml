@@ -20,7 +20,7 @@ dependencies:
   # wand # XJM commented  2023.11 since no protein visualization needed in course
   - pip:
     - chembl_webresource_client==0.10.5
-    - biopandas==0.2.5
-    - pypdb==1.300
+    # - biopandas==0.2.5 # XJM commented  2024.01 since not used in course
+    # - pypdb==1.300     # XJM commented  2024.01 since not used in course
     - prince==0.2.6
     - nbautoeval==1.7.0
