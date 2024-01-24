@@ -1,22 +1,25 @@
-GSON "chimie informatique sous python"
+# GSON module "chimie informatique sous python"
 
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
 Huge thanks to them for providing such good learning material.
 
-**Launch notebooks directly in your browser:**  
+## Launch notebooks directly in your browser
 
-- If you prefer the `jupyter lab` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+- If you prefer the modern `jupyter lab` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD)
+  - be careful that for the exos using `nbautoeval`, the cell output may return error
+  - for the moment it is **NOT recommended to use above method**
 
-- Or if you prefer the traditional `jupyter notebook` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/)
+- If you prefer the traditional `jupyter notebook` interface: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/)
 
 The materials are exactly the same. The only difference is the appearance.  
-Both can take around 10 minutes, but does not require any kind of setup on your machine.
+The 1st launch can take around 10 minutes, and it will be faster from 2nd time.  
+It **does not require any setup/installation on your machine** (which is quite easy to use). You just need an Internet connection and a browser.
 
 **Remarks:**  
 
-1. To save resources, your connection to the `Binder` server will be **automatically cut off** if you have no activity for around 10 mins
+1. To save resources, your connection to the `Binder` server will be **automatically cut off** if you have no activity (cell edit/cell execution) for around 10 mins
 
-2. Your changes to the notebooks will **NOT be saved**. So if you reconnect, you lose all what you have done previously...
+2. Your changes to the notebooks will **NOT be saved**. So if you close the browser and re-open `Binder`, you lose all what you have done previously...
 
 ## Special instructions for promo 2023-2024
 
@@ -34,7 +37,7 @@ If you are using the `Linux` session on the PCs of "salle info", here are the co
 Simply close and re-open another terminal.  
 You should now see `(base)` on the leftmost of your prompt. (ask the teachers if you still cannot see it)  
 
-3. Create the virtual environment for this course from given file, by copy-paste below command into your terminal, and execute it: 
+3. Create the virtual environment for this course from given file, by copy-paste below command into your terminal, and execute it:
 
 ```bash
 conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
@@ -64,86 +67,80 @@ conda activate teachopencadd
 jupyter notebook
 ```
 
-## Organisation of year 2023-2024
+## Organisation of session 2023-2024
 
-**Lundi 15 janvier 2024 13h30-17h30**
+### Lundi 15 janvier 2024 13h30-17h30
 
 - Introduction
   - Slides 1_GSON_intro (30 min) XM & JM
-  - Slides 2_introduction_informatique (30 min) XM
-  - Talktorial Introductif 1 Intro Python, jupyter (40 min) XM
-  - Talktorial Introductif 2 Intro chemoinfo - RDKit (1h20) JM
+  - Slides 2_introduction_informatique (45 min) XM
+  - Talktorial Introductif 1 Intro Python, jupyter (1h40) XM
 
-**Mardi 16 janvier 2024 13h30-17h30**
+### Mardi 16 janvier 2024 13h30-17h30
 
-- Data Acquisition (2h-2h30) XM
+- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h40) JM
+
+- Data Acquisition (1h30) XM
   - Talktorial 1 Data acquisition from ChEMBL
+
+### Mercredi 17 janvier 2024 13h30-17h30
 
 - Filtering (1h45-2h) JM
   - Descriptors and ADME (1h30)
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-**Mercredi 17 janvier 2024 13h30-17h30**
-
-- ACP (2h) JM
-  - Slides 3_Intro_ACP
-  - Notebook ACP
-
-- Filtering (1h) XM
+- Filtering (40 min) XM
   - Talktorial 3 Substructure removal : PAINS
 
-- Ligand based Screening (2h45) XM
-  - Slides 5_fingerprint_similarity (45 mins)
+### Jeudi 18 janvier 2024 13h30-17h30
 
-**Jeudi 18 janvier 2024 13h30-17h30**
-
-- Ligand based Screening (2h45) JM
+- Ligand based Screening (2h30) JM
+  - Slides 5_fingerprint_similarity (30 min)
   - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
 - Clustering (1h45) XM
-  - Talktorial 5 : Compound clustering (1h15)
-  - Talktorial 6 : MCS (30 min)
+  - Talktorial 5 : Compound clustering
 
-**Vendredi 19 janvier 2024 13h30-17h30**
+### Vendredi 19 janvier 2024 13h30-17h30
 
 - Machine Learning (1h45) JM
   - Slides 6_Machine Learning
-  - Talktorial 7 Machine Learning (ROC curve) JM
+  - Talktorial 7 Machine Learning (ROC curve)
 
-- Applications in chemoinformatic  (30 min) XM & JM
+- Applications in chemoinformatic (45 min) XM & JM
   - Slides 7_Applications
 
-- Exam (30 min) + correction explication (30 min)
+- Exam (60 min)
 
-## History
+## History of previous years
 
 - 2018: Fabrice, Colin
 
 - 2019: Colin, Gautier
 
 - 2020: Gautier, Pierre-Yves
-    - 21 students
-    - Integration of TeachOpenCADD and binder
+  - 21 students
+  - Integration of TeachOpenCADD and binder
 
 - 2021: Gautier, Pierre-Yves
-    - 22 students
-    - Distance learning, via TEAMS
-    - Integration of nbautoeval (Exercises and Quiz)
+  - 22 students
+  - Distance learning, via TEAMS
+  - Integration of nbautoeval (Exercises and Quiz)
 
 - 2022: Pierre-Yves, Xiaojun
-    - 9 students (7 present, 2 absent)
-    - Introduce ```mamba``` for quicker env resolution
-    - Added short introduction of Linux Commands
+  - 9 students (7 present, 2 absent)
+  - Introduce ```mamba``` for quicker env resolution
+  - Added short introduction of Linux Commands
 
 - 2023: Pierre-Yves, Xiaojun
-    - 5 students (4 present, 1 absent)
-    - Created a pre-course questionnaire to better adapt the course to future students attending the course
+  - 5 students (4 present, 1 absent)
+  - Created a pre-course questionnaire to better adapt the course to future students attending the course
 
 - 2024: Xiaojun, Jérémy
-    - 17 students
-    - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
-    - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
+  - 17 students (16 inscriptions + 1 volunteer participant)
+  - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
+  - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
 
 ## Installation
 
@@ -200,29 +197,25 @@ So it means the students have to repeat the steps of
 
 from Tuesday to Friday, before each course starts (which is annoying!)  
 
-**Note for teachers:**  
-Perhaps switch to Windows from next year?
-
-
 ### Work in progress, reserved for teachers
 
 1. Open a terminal, and type `echo $PATH` to check the existing PATHS (normally you shoud not be able to find `/opt/anaconda3`).
 2. Type `gedit ~/.bashrc`. A text editor interface will automatically appear.
 3. Add `export PATH=/opt/anaconda3/bin:$PATH` to the end of the file, then save and close the file.
 4. Reload the profile with `source ~/.bashrc`
-5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`. 
-6. Type the command `conda init bash` to initiate it. 
+5. Type the command `which conda`, you should be able to find it at `opt/anaconda3/`.
+6. Type the command `conda init bash` to initiate it.
 7. Reload the profile with `source ~/.bashrc`.  
 After all these steps, you should now see `(base)` before your prompt.
 
-### Another solution provided by service info (which seems easier, thus recommended):
+### Another solution provided by service info (which seems easier, thus recommended)
 
 1. Open a terminal, and change to the directory where `conda` is installed: `cd /opt/anaconda3/bin`
 2. Initiate it by `./conda init`
 3. Close the terminal, and re-open a new one
 4. You should now see `(base)` before your prompt
 
-### A more automatic way (WIP, since it requires restarting the terminal, it does not work for the moment):
+### A more automatic way (WIP, since it requires restarting the terminal, it does not work for the moment)
 
 An `init.sh` script is also included in the repo. It automates all the 3 major steps:
 
@@ -238,24 +231,3 @@ To use it under Linux:
 - If the script success, you will need to close and open another terminal
 
 Voilà! You are ready to go!
-
-## In case needed
-### To roll-back to the original version, and update info in local repo
-
-1. In a terminal, `cd` to the folder where you cloned the repo, and run
-```
-git status
-```
-Normally you will see some files that are created/modified during the last cours.
-
-2. Since we want to **all start from the same place**, we can run below command to **discard all the changes that have been made since cloning**:
-```
-git restore *
-```
-This will restore everything back to the state just after cloning.
-
-3. Update your local repo by pulling from GitHub:
-```
-git pull
-```
-You will have the most recent version of notebooks on your local PC.  
