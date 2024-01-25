@@ -103,7 +103,7 @@ question-06:
   score: 1
   question:
     text: "How do you access the 3rd row of a dataframe ?"
-  question_sequel: "df is a dataframe of 100 rows, having index going from 1 to 100"
+  question_sequel: "df is a dataframe of 100 rows, having index going from 101 to 200"
   options:
     - text: |
         df.loc[2]
