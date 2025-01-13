@@ -9,7 +9,8 @@ dependencies:
   # most of the fixed conda package versions are elevated by XJM except for rdkit
   - python=3.6.7
   - pip
-  - jupyter
+  - notebook==6.3.0 # XJM added 2025.01 since I want old classical interface
+  # - jupyter # XJM commented 2025.01 since I want old classical interface
   # XJM tried rdkit version 2019.03.01 and 2021.03.5, but both have some small issue when running T3
   - rdkit=2020.03.1
   - pandas
@@ -17,7 +18,6 @@ dependencies:
   # pmw # XJM commented  2023.11 since no protein visualization needed in course
   - scikit-learn
   - seaborn
-  - notebook==6.3.0 # XJM added 2025.01 since I want old classical interface
   # wand # XJM commented  2023.11 since no protein visualization needed in course
   - pip:
     - chembl_webresource_client==0.10.5
