@@ -17,6 +17,7 @@ dependencies:
   # pmw # XJM commented  2023.11 since no protein visualization needed in course
   - scikit-learn
   - seaborn
+  - notebook==6.3.0 # XJM added 2025.01 since I want old classical interface
   # wand # XJM commented  2023.11 since no protein visualization needed in course
   - pip:
     - chembl_webresource_client==0.10.5
