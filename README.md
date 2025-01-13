@@ -1,5 +1,11 @@
 # GSON module "chimie informatique sous python"
 
+## TL;DR
+
+Click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICOA-SBC/GSON-cheminformatics/HEAD?urlpath=/tree/) to start your lesson.
+
+## Acknowledgement
+
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
 Huge thanks to them for providing such good learning material.
 
@@ -67,48 +73,48 @@ conda activate teachopencadd
 jupyter notebook
 ```
 
-## Organisation of session 2023-2024
+## Organisation of session 2024-2025
 
-### Lundi 15 janvier 2024 13h30-17h30
+### Lundi 13 janvier 2025 13h30-17h30
 
 - Introduction
-  - Slides 1_GSON_intro (30 min) XM & JM
-  - Slides 2_introduction_informatique (45 min) XM
-  - Talktorial Introductif 1 Intro Python, jupyter (1h40) XM
+  - Slides 1_GSON_intro (45 min)
+  - Slides 2_introduction_informatique (45 min)
+  - Talktorial Introductif 1 Intro Python, jupyter (1h40)
 
-### Mardi 16 janvier 2024 13h30-17h30
+### Mardi 14 janvier 2025 13h30-17h30
 
-- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h40) JM
+- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h40)
 
-- Data Acquisition (1h30) XM
+- Data Acquisition (1h30)
   - Talktorial 1 Data acquisition from ChEMBL
 
-### Mercredi 17 janvier 2024 13h30-17h30
+### Mercredi 15 janvier 2025 13h30-17h30
 
-- Filtering (1h45-2h) JM
+- Filtering (1h45-2h)
   - Descriptors and ADME (1h30)
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-- Filtering (40 min) XM
+- Filtering (40 min)
   - Talktorial 3 Substructure removal : PAINS
 
-### Jeudi 18 janvier 2024 13h30-17h30
+### Jeudi 16 janvier 2025 13h30-17h30
 
-- Ligand based Screening (2h30) JM
+- Ligand based Screening (2h30)
   - Slides 5_fingerprint_similarity (30 min)
   - Talktorial 4 Fingerprints and Molecular Similarity (2h)
 
-- Clustering (1h45) XM
+- Clustering (1h45)
   - Talktorial 5 : Compound clustering
 
-### Vendredi 19 janvier 2024 13h30-17h30
+### Vendredi 17 janvier 2025 13h30-17h30
 
-- Machine Learning (1h45) JM
+- Machine Learning (1h45)
   - Slides 6_Machine Learning
   - Talktorial 7 Machine Learning (ROC curve)
 
-- Applications in chemoinformatic (45 min) XM & JM
+- Applications in chemoinformatic (45 min)
   - Slides 7_Applications
 
 - Exam (60 min)
@@ -142,7 +148,11 @@ jupyter notebook
   - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
   - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
 
-## Installation
+- 2025: Xiaojun, Pascal
+  - 11 students
+
+
+## Installation on local machine
 
 Suppose that you are using **Linux** (**MacOS** should work the same way, since it is also **Unix**):
 
