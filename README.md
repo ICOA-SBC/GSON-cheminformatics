@@ -27,6 +27,95 @@ It **does not require any setup/installation on your machine** (which is quite e
 
 2. Your changes to the notebooks will **NOT be saved**. So if you close the browser and re-open `Binder`, you lose all what you have done previously...
 
+## Organisation of session 2024-2025
+
+### Lundi 13 janvier 2025 13h30-17h30
+
+- Introduction
+  - Slides 1_GSON_intro (70 min)
+  - Slides 2_introduction_informatique (40 min)
+  - Talktorial Introductif 1 Intro Python, jupyter (1h10)
+  - Talktorial Introductif 2 Intro chemoinfo - RDKit (20 min)
+
+### Mardi 14 janvier 2025 13h30-17h30
+
+- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h10)
+
+- Data Acquisition (1h50)
+  - Talktorial 1 Data acquisition from ChEMBL
+
+### Mercredi 15 janvier 2025 13h30-17h30
+
+- Filtering (1h45-2h)
+  - Descriptors and ADME (1h30)
+    - Slides 4_Descripteurs_fingerprints
+    - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
+
+- Filtering (40 min)
+  - Talktorial 3 Substructure removal : PAINS
+
+### Jeudi 16 janvier 2025 13h30-17h30
+
+- Ligand based Screening (2h30)
+  - Slides 5_fingerprint_similarity (30 min)
+  - Talktorial 4 Fingerprints and Molecular Similarity (2h)
+
+- Clustering (1h45)
+  - Talktorial 5 : Compound clustering
+
+### Vendredi 17 janvier 2025 13h30-17h30
+
+- Machine Learning (1h45)
+  - Slides 6_Machine Learning
+  - Talktorial 7 Machine Learning (ROC curve)
+
+- Applications in chemoinformatics + review (55 min)
+  - Slides 7_Applications
+
+- Exam (60 min)
+
+## Installation on local machine (Windows)
+
+Follow the instructions given by your professor during the course!
+
+## Installation on local machine (Linux and MacOS)
+
+Suppose that you are using **Linux** (**MacOS** should work the same way, since it is also **Unix**):
+
+1. Install `miniconda` (or `anaconda` if you prefer)
+
+- For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Open a terminal, you should normally see `(base)` before your prompt. (See below FAQ part if you cannot see `(base)`)  
+Create the virtual environment for this course from given file:  
+
+```bash
+conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
+```
+
+- This file contains a list of `conda`/`pip` packages that are required for this course.  
+- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
+
+3. Open a terminal, and clone the repo to your local PC:
+
+```bash
+git clone https://github.com/ICOA-SBC/GSON-cheminformatics
+```
+
+4. Activate the virtual environment:
+
+```bash
+conda activate teachopencadd
+```
+
+- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
+
+5. You are ready to go. Simply launch the `notebook` interface with command:
+
+```bash
+jupyter notebook
+```
+
 ## Special instructions for promo 2023-2024
 
 If you are using `Windows` on your own PC, before each course, please execute the command `git pull` in your terminal, to get the latest version of material.
@@ -73,52 +162,6 @@ conda activate teachopencadd
 jupyter notebook
 ```
 
-## Organisation of session 2024-2025
-
-### Lundi 13 janvier 2025 13h30-17h30
-
-- Introduction
-  - Slides 1_GSON_intro (45 min)
-  - Slides 2_introduction_informatique (45 min)
-  - Talktorial Introductif 1 Intro Python, jupyter (1h40)
-
-### Mardi 14 janvier 2025 13h30-17h30
-
-- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h40)
-
-- Data Acquisition (1h30)
-  - Talktorial 1 Data acquisition from ChEMBL
-
-### Mercredi 15 janvier 2025 13h30-17h30
-
-- Filtering (1h45-2h)
-  - Descriptors and ADME (1h30)
-    - Slides 4_Descripteurs_fingerprints
-    - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
-
-- Filtering (40 min)
-  - Talktorial 3 Substructure removal : PAINS
-
-### Jeudi 16 janvier 2025 13h30-17h30
-
-- Ligand based Screening (2h30)
-  - Slides 5_fingerprint_similarity (30 min)
-  - Talktorial 4 Fingerprints and Molecular Similarity (2h)
-
-- Clustering (1h45)
-  - Talktorial 5 : Compound clustering
-
-### Vendredi 17 janvier 2025 13h30-17h30
-
-- Machine Learning (1h45)
-  - Slides 6_Machine Learning
-  - Talktorial 7 Machine Learning (ROC curve)
-
-- Applications in chemoinformatic (45 min)
-  - Slides 7_Applications
-
-- Exam (60 min)
-
 ## History of previous years
 
 - 2018: Fabrice, Colin
@@ -149,46 +192,7 @@ jupyter notebook
   - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
 
 - 2025: Xiaojun, Pascal
-  - 11 students
-
-
-## Installation on local machine
-
-Suppose that you are using **Linux** (**MacOS** should work the same way, since it is also **Unix**):
-
-1. Install `miniconda` (or `anaconda` if you prefer)
-
-- For installation details, please refer to their [official documentation](https://docs.conda.io/en/latest/miniconda.html).
-
-2. Open a terminal, you should normally see `(base)` before your prompt. (See below FAQ part if you cannot see `(base)`)  
-Create the virtual environment for this course from given file:  
-
-```bash
-conda env create -f https://raw.githubusercontent.com/ICOA-SBC/GSON-cheminformatics/master/environment.yml
-```
-
-- This file contains a list of `conda`/`pip` packages that are required for this course.  
-- You are encouraged to check the content of this file, to make sure it does not contain malicious software.
-
-3. Open a terminal, and clone the repo to your local PC:
-
-```bash
-git clone https://github.com/ICOA-SBC/GSON-cheminformatics
-```
-
-4. Activate the virtual environment:
-
-```bash
-conda activate teachopencadd
-```
-
-- You should observe that the `(base)` has become `(teachopencadd)`, meaning that you are now in this new virtual environment.
-
-5. You are ready to go. Simply launch the `notebook` interface with command:
-
-```bash
-jupyter notebook
-```
+  - 12 students
 
 ## FAQ
 
