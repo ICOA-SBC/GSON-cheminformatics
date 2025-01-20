@@ -7,7 +7,7 @@ Click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/g
 ## Acknowledgement
 
 This course is mostly based on [teachopencadd](https://github.com/volkamerlab/teachopencadd).  
-Huge thanks to them for providing such good learning material.
+**Huge thanks to them for providing such good learning material!**
 
 ## Launch notebooks directly in your browser
 
@@ -27,56 +27,69 @@ It **does not require any setup/installation on your machine** (which is quite e
 
 2. Your changes to the notebooks will **NOT be saved**. So if you close the browser and re-open `Binder`, you lose all what you have done previously...
 
+### Note for session 2024-2025
+
+- since an update of `Binder` server in 2025.01, the interface is fixed to the newer one, which is not compatible with the `nbautoeval`
+  - it can still be used, except **we do not have the interactive evaluation of exercises and quiz**
+
 ## Organisation of session 2024-2025
 
 ### Lundi 13 janvier 2025 13h30-17h30
 
 - Introduction
-  - Slides 1_GSON_intro (70 min)
+  - Slides 1_GSON_intro (80 min)
   - Slides 2_introduction_informatique (40 min)
   - Talktorial Introductif 1 Intro Python, jupyter (1h10)
   - Talktorial Introductif 2 Intro chemoinfo - RDKit (20 min)
 
 ### Mardi 14 janvier 2025 13h30-17h30
 
-- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h10)
+- Talktorial Introductif 2 Intro chemoinfo - RDKit (1h30)
 
-- Data Acquisition (1h50)
+- Data Acquisition (1h20)
   - Talktorial 1 Data acquisition from ChEMBL
 
 ### Mercredi 15 janvier 2025 13h30-17h30
 
 - Filtering (1h45-2h)
-  - Descriptors and ADME (1h30)
+  - Descriptors and ADME (1h20)
     - Slides 4_Descripteurs_fingerprints
     - Talktorial 2 Molecular filtering: ADME/Lipinski criteria
 
-- Filtering (40 min)
+- Filtering (30 min)
   - Talktorial 3 Substructure removal : PAINS
+
+- Ligand based Screening (1h)
+  - Slides 5_fingerprint_similarity (20 min)
+  - Talktorial 4 Fingerprints and Molecular Similarity (40 min)
 
 ### Jeudi 16 janvier 2025 13h30-17h30
 
-- Ligand based Screening (2h30)
-  - Slides 5_fingerprint_similarity (30 min)
-  - Talktorial 4 Fingerprints and Molecular Similarity (2h)
-
-- Clustering (1h45)
-  - Talktorial 5 : Compound clustering
+- Live demo: Python, jupyter notebook, `pandas` (3h30)
+- Ligand based Screening (15 min)
 
 ### Vendredi 17 janvier 2025 13h30-17h30
 
-- Machine Learning (1h45)
-  - Slides 6_Machine Learning
-  - Talktorial 7 Machine Learning (ROC curve)
+- Machine Learning (1h50)
+  - Slides 6_Machine Learning (1h)
+  - Talktorial 7 Machine Learning (45 min)
 
 - Applications in chemoinformatics + review (55 min)
   - Slides 7_Applications
 
 - Exam (60 min)
 
+## Installation on local machine (Chromebook)
+
+- from the feedback of the students, it seems impossible
+- however, I DO found some trick which seems to allow it, for example:
+  - https://gist.github.com/TomatOid/335f53d72cc3a93022e827d9f650aaa4
+  - I have never tested, since I personnally do not have a Chromebook
+  - but it requires quite high level IT technique, which students may not have
+
 ## Installation on local machine (Windows)
 
-Follow the instructions given by your professor during the course!
+Follow the instructions step by step given by your professor during the course!
 
 ## Installation on local machine (Linux and MacOS)
 
@@ -191,8 +204,12 @@ jupyter notebook
   - Cleaned not used packages/channels in `environment.yml` for quicker env resolution
   - Added `Slide 7_Applications`, to showcase other fields of applications not covered in the course
 
-- 2025: Xiaojun, Pascal
-  - 12 students
+- 2025: Xiaojun
+  - 12 students (11 present, 1 absent)
+  - local installation of `Anaconda` on students' PC (due to problems of "salle info" and `Binder`)
+  - live demo of 3h30 on Python, jupyter notebook and `pandas` added
+
+- 2026: ?
 
 ## FAQ
 
